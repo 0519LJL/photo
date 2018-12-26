@@ -16,5 +16,10 @@ namespace MyPhotoManagement.Controllers
             return View();
         }
 
+        public ActionResult Image()
+        {
+            return View();
+        }
+
     }
 }

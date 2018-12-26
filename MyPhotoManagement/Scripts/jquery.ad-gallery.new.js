@@ -490,7 +490,6 @@
       );
     },
 
-    //鼠标事件
     initKeyEvents: function() {
       var context = this;
       $(document).keydown(

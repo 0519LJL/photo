@@ -29,49 +29,72 @@
             -ms-transform: rotate(30deg); /* IE 9 */
             -moz-transform: rotate(30deg); /* Firefox */
             -webkit-transform: rotate(30deg); /* Safari and Chrome */
-            -o-transform: rotate(30deg); /* Opera */
+            -o-transform: rotate(30deg); /* Opera style="visibility:hidden"*/
         }
+
+        .anim_fade_image {
+            position: absolute;
+            -webkit-animation-name: fadeInOut;
+            -webkit-animation-timing-function: ease-in-out;
+            -webkit-animation-iteration-count: infinite;
+            -webkit-animation-duration: 12s;
+            -webkit-animation-direction: alternate;
+        }
+        
+
     </style>
 </head>
 <body>
 <div id="base">
-    <img id="imgMuc" class="div_music" src="~/images/music1.png" onclick="clickA()" />
-    @*<img class="open" src="~/images/music.png" onclick="clickA()" />*@
+    <img id="imgMuc" class="div_music anim_fade_image" src="~/images/music1.png" onclick="playOrPause()" />
     <img id="photo" style="width: 100%;height: 100%"/>
-    <div style="visibility:hidden">
-        <audio id="auMusic" autoplay="autoplay">
-            <source src="~/audio/mp3/1.mp3" type="audio/mpeg" />
-            @*<source src="~/audio/mp3/2.mp3" type="audio/mpeg" />*@
-            @*<source src="~/audio/mp3/3.mp3" type="audio/mpeg" />*@
-            @*<source src="~/audio/mp3/4.mp3" type="audio/mpeg" />*@
-            @*<source src="~/audio/mp3/5.mp3" type="audio/mpeg" />*@
-            @*<source src="~/audio/mp3/6.mp3" type="audio/mpeg" />*@
+    <div >
+        <audio id="auMusic" autoplay="autoplay" src="~/audio/mp3/1.mp3">
             does not support.
         </audio>
     </div>
 </div>
 
 <script type="text/javascript">
-    //var a = document.getElementById("auMusic");
-    
-    //$(function() {
-    //    var a = document.getElementById("auMusic");
-    //    a.src = require("~/audio/mp3/6.mp3");
-    //    a.play();
-    //})
-    function clickA() {
-        var a = document.getElementById("auMusic");
-        if (a.paused) {
+    var aud = document.getElementById("auMusic");
 
-            a.play();
+    function playOrPause() {
+        //if (aud.paused) {
+        //    aud.play();
+        //} else {
+        //    aud.pause();
+        //}
 
-        } else {
-
-            a.pause();
-
-        }
+        //$("#photo").fadeOut(2000);
     }
 
+    let root = 2;
+    aud.loop = false;
+    aud.addEventListener('ended', function () {
+        
+        $("#auMusic").attr("src", "audio/mp3/" + root + ".mp3");
+        root += 1;
+        if (root > 6) {
+            root = 1;
+        }
+    }, false);
+</script>
+
+@*定时器*@
+<script type="text/javascript">
+
+    //图片转换
+    var num = 1;
+    setInterval(function () {
+        $("#photo").attr("src", "photo/" + num + ".jpg");
+        
+        num++;
+        if (num > 3) {
+            num = 1;
+        }
+    }, 5000);
+
+    //图标旋转
     let cor = 5;
     setInterval(function () {
         $("#imgMuc").css("transform", "rotate(" + cor + "deg)");
@@ -84,18 +107,6 @@
             cor = 5;
         }
     }, 80);
-</script>
-
-@*定时器*@
-<script type="text/javascript">
-    var num = 1;
-    setInterval(function () {
-        $("#photo").attr("src", "photo/"+num+".jpg");
-        num++;
-        if (num > 3) {
-            num = 1;
-        }
-    }, 5000);
 </script>
 
 @*全屏*@

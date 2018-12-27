@@ -156,7 +156,7 @@
     <Content Include="images\scroll-auto-bg.png" />
     <Content Include="images\scrollBgline.gif" />
     <Content Include="images\sel-bg.gif" />
-    <Content Include="photo\1.jpg" />
+    <Content Include="photo\10.jpg" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
@@ -213,10 +213,15 @@
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <None Include="Properties\PublishProfiles\photo.pubxml" />
     <None Include="Scripts\jquery-1.8.2.intellisense.js" />
-    <Content Include="photo\2.jpg" />
+    <Content Include="photo\1.JPG" />
+    <Content Include="photo\12.jpg" />
+    <Content Include="photo\4.JPG" />
+    <Content Include="photo\3.JPG" />
+    <Content Include="photo\2.JPG" />
     <Content Include="photo\200_30227a853ade6.jpg" />
-    <Content Include="photo\3.jpg" />
+    <Content Include="photo\13.jpg" />
     <Content Include="photo\big1.jpg" />
     <Content Include="photo\next.jpg" />
     <Content Include="photo\prev.jpg" />

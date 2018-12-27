@@ -37,7 +37,7 @@
 <body>
 <div id="base">
     <img id="imgMuc" class="div_music" src="~/images/music1.png" onclick="playOrPause()" />
-    <img id="photo" style="width: 100%;height: 100%"/>
+    <img id="photo" style="width: 100%;height: 100%" src="~/photo/1.jpg"/>
     <div >
         <audio id="auMusic" autoplay="autoplay" src="~/audio/mp3/1.mp3">
             does not support.
@@ -56,7 +56,7 @@
         }
     }
 
-    let root = 2;
+    var root = 2;
     aud.loop = false;
     aud.addEventListener('ended', function () {
         
@@ -72,7 +72,7 @@
 <script type="text/javascript">
 
     //图片转换
-    var num = 1;
+    var num = 2;
     setInterval(function () {
         $("#photo").attr("src", "photo/" + num + ".jpg");
         
@@ -83,7 +83,7 @@
     }, 5000);
 
     //图标旋转
-    let cor = 5;
+    var cor = 5;
     setInterval(function () {
         $("#imgMuc").css("transform", "rotate(" + cor + "deg)");
         $("#imgMuc").css("-ms-transform", "rotate(" + cor + "deg)");

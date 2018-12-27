@@ -1,0 +1,160 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>login validate</title>
+    <script src="~/Scripts/jquery-1.8.2.min.js"></script>
+    <style type="text/css">
+        html,body,div{
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+        }
+        div{
+            background-color: #FFF8DC;
+        }
+        .div_music{
+            position: fixed;
+            top: 30px;
+            right: 30px;
+            z-index: 1;
+            /*opacity: 0;*/ 
+            height: 20px;
+            width: 20px; 
+        }
+
+        .open {
+            transform: rotate(30deg);
+            -ms-transform: rotate(30deg); /* IE 9 */
+            -moz-transform: rotate(30deg); /* Firefox */
+            -webkit-transform: rotate(30deg); /* Safari and Chrome */
+            -o-transform: rotate(30deg); /* Opera */
+        }
+    </style>
+</head>
+<body>
+<div id="base">
+    <img id="imgMuc" class="div_music" src="~/images/music1.png" onclick="clickA()" />
+    @*<img class="open" src="~/images/music.png" onclick="clickA()" />*@
+    <img id="photo" style="width: 100%;height: 100%"/>
+    <div style="visibility:hidden">
+        <audio id="auMusic" autoplay="autoplay">
+            <source src="~/audio/mp3/1.mp3" type="audio/mpeg" />
+            @*<source src="~/audio/mp3/2.mp3" type="audio/mpeg" />*@
+            @*<source src="~/audio/mp3/3.mp3" type="audio/mpeg" />*@
+            @*<source src="~/audio/mp3/4.mp3" type="audio/mpeg" />*@
+            @*<source src="~/audio/mp3/5.mp3" type="audio/mpeg" />*@
+            @*<source src="~/audio/mp3/6.mp3" type="audio/mpeg" />*@
+            does not support.
+        </audio>
+    </div>
+</div>
+
+<script type="text/javascript">
+    //var a = document.getElementById("auMusic");
+    
+    //$(function() {
+    //    var a = document.getElementById("auMusic");
+    //    a.src = require("~/audio/mp3/6.mp3");
+    //    a.play();
+    //})
+    function clickA() {
+        var a = document.getElementById("auMusic");
+        if (a.paused) {
+
+            a.play();
+
+        } else {
+
+            a.pause();
+
+        }
+    }
+
+    let cor = 5;
+    setInterval(function () {
+        $("#imgMuc").css("transform", "rotate(" + cor + "deg)");
+        $("#imgMuc").css("-ms-transform", "rotate(" + cor + "deg)");
+        $("#imgMuc").css("-moz-transform", "rotate(" + cor + "deg)");
+        $("#imgMuc").css("-webkit-transform", "rotate(" + cor + "deg)");
+        $("#imgMuc").css("-o-transform", "rotate(" + cor + "deg)");
+        cor += 5;
+        if (cor > 360) {
+            cor = 5;
+        }
+    }, 80);
+</script>
+
+@*定时器*@
+<script type="text/javascript">
+    var num = 1;
+    setInterval(function () {
+        $("#photo").attr("src", "photo/"+num+".jpg");
+        num++;
+        if (num > 3) {
+            num = 1;
+        }
+    }, 5000);
+</script>
+
+@*全屏*@
+<script type="text/javascript">
+
+    //$("#photo").click(function () {
+    //    fullscreen();
+    //});
+    // 全屏
+    function fullscreen() {
+        var docElm = document.documentElement;
+        if (docElm.requestFullscreen) {
+            docElm.requestFullscreen();
+        } else if (docElm.mozRequestFullScreen) {
+            docElm.mozRequestFullScreen();
+        } else if (docElm.webkitRequestFullScreen) {
+            docElm.webkitRequestFullScreen();
+        } else if (docElm.msRequestFullscreen) {
+            docElm.msRequestFullscreen();
+        }
+    }
+
+    // 退出全屏
+    function exitFullscreen() {
+        if (document.exitFullscreen) {
+            document.exitFullscreen();
+        } else if (document.mozCancelFullScreen) {
+            document.mozCancelFullScreen();
+        } else if (document.webkitCancelFullScreen) {
+            document.webkitCancelFullScreen();
+        } else if (document.msExitFullscreen) {
+            document.msExitFullscreen();
+        }
+    }
+
+    // 监听是否全屏
+    window.onload = function () {
+        var elem = document.getElementById('photo');
+        document.addEventListener('fullscreenchange',
+            function () {
+                elem.innerText = document.fullscreen ? 'yes' : 'no';
+            },
+            false);
+        document.addEventListener('mozfullscreenchange',
+            function () {
+                elem.innerText = document.mozFullScreen ? 'yes' : 'no';
+            },
+            false);
+        document.addEventListener('webkitfullscreenchange',
+            function () {
+                elem.innerText = document.webkitIsFullScreen ? 'yes' : 'no';
+            },
+            false);
+        document.addEventListener('msfullscreenchange',
+            function () {
+                elem.innerText = document.msFullscreenElement ? 'yes' : 'no';
+            },
+            false);
+    }
+</script>
+</body>
+</html>

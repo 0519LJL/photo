@@ -137,6 +137,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="audio\mp3\1.mp3" />
+    <Content Include="audio\mp3\2.mp3" />
+    <Content Include="audio\mp3\4.mp3" />
+    <Content Include="audio\mp3\5.mp3" />
+    <Content Include="audio\mp3\3.mp3" />
+    <Content Include="audio\mp3\6.mp3" />
     <Content Include="Content\photo-scan.css" />
     <Content Include="images\ajax-loader.gif" />
     <Content Include="images\body_bg.gif" />
@@ -144,6 +150,8 @@
     <Content Include="images\img-border-bg.gif" />
     <Content Include="images\img_next.cur" />
     <Content Include="images\img_pre.cur" />
+    <Content Include="images\music.png" />
+    <Content Include="images\music1.png" />
     <Content Include="images\other-bg.png" />
     <Content Include="images\scroll-auto-bg.png" />
     <Content Include="images\scrollBgline.gif" />
@@ -206,7 +214,9 @@
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <None Include="Scripts\jquery-1.8.2.intellisense.js" />
+    <Content Include="photo\2.jpg" />
     <Content Include="photo\200_30227a853ade6.jpg" />
+    <Content Include="photo\3.jpg" />
     <Content Include="photo\big1.jpg" />
     <Content Include="photo\next.jpg" />
     <Content Include="photo\prev.jpg" />

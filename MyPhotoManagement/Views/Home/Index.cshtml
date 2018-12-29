@@ -1,73 +1,190 @@
 ﻿<!DOCTYPE html>
-<html lang="zh_CN">
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=7" />
-
-    <link href="~/Content/photo-scan.css" rel="stylesheet" />
+    <meta charset="UTF-8">
+    @*<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />*@
+    <title>login validate</title>
     <script src="~/Scripts/jquery-1.8.2.min.js"></script>
-    <script src="~/Scripts/jquery.ad-gallery.new.js"></script>
+    <style type="text/css">
+        body{
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+            background-size:contain
+        }
+        .container {
+            display: flex;
+            align-items: center; /* 垂直居中 */
+            justify-content: center; /* 水平居中 */
+        }
+
+       .center-in-center{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            -moz-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            -o-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+        }
+
+    
+    </style>
 </head>
 <body>
-    <script type="text/javascript">
-        $(function () {
-            var galleries = $('.ad-gallery').adGallery({
-                width: 990,
-                height: '100%',
-                start_at_index: 0,
-                left_img_container: false,
-                mouse_cursor: { next: 'style="cursor: url(&quot;./images/img_next.cur&quot;), auto;"', prev: 'style="cursor: url(&quot;./images/img_pre.cur&quot;), auto;"' },
-                jump: true,
-                cycle: 8,
-                loader_image: 'images/ajax-loader.gif',
-                slideshow: { enable: false },
-                effect: 'fade', // or 'slide-hori', 'slide-vert', 'resize', 'fade', 'none' or false
-                callbacks: {
-                    beforeImageVisible: function (new_image, old_image) {
-                    }
-                }
-            });
-        });
-    </script>
-    <div class="photo-warp-inner ad-gallery" style="visibility: visible;">
-        <div class="img-title">
-            <h2>主题</h2>
-            <span class="r-area"><a href="#" title="查看全部图片">全部图片</a></span>
-        </div>
-        <!--img-title end-->
-        <div class="mainArea ad-image-wrapper" style="background: url(photo/1.jpg);background-size: 100%"></div>
-        <!--mainArea end-->
-        <div class="photo-info">
-            <p class="tit"><span class="fr">主要内容</span><a target="_blank" href="#">作者</a>&nbsp;&nbsp;时间描述</p>
-            <p class="picInfo">详细描述</p>
-            <p id="descriptions"></p>
-        </div>
-        <!--photo-info end -->
-        <div class="photoList-wrap cf" style=" height:120px;">
-            <div class="nph_set_pre fl"><span><a href="#" class="prevSet"><img alt="更多图片" src="photo/prev.jpg"></a></span><p><a href="">< 上一图集</a></p></div>
-            <div class="ad-nav" style="width:600px;display:inline;margin:0 10px;float:left;">
-                <div bosszone="photoShowList" id="photo-List" class="photo-List ad-thumbs" style="width:528px;">
-                    <ul class="ad-thumb-list">
-                        <li><a href="photo/big1.jpg" rel="photo.big1.jpg"><img src="photo/1.jpg" class="image0" rel="1" /></a></li>
-                        <li><a href="photo/big2.jpg" rel="photo.big2.jpg"><img src="photo/2.jpg" class="image1" rel="2" /></a></li>
-                        <li><a href="photo/big3.jpg" rel="photo/big3.jpg"><img src="photo/3.jpg" class="image2" rel="3" /></a></li>
-                        <li><a href="photo/big4.jpg" rel="photo/big4.jpg"><img src="photo/4.jpg" class="image3" rel="4" /></a></li>
-                        <li><a href="photo/big5.jpg" rel="photo/big5.jpg"><img src="photo/5.jpg" class="image4" rel="5" /></a></li>
-                        <li><a href="photo/big6.jpg" rel="photo/big6.jpg"><img src="photo/6.jpg" class="image5" rel="6" /></a></li>
-                        <li><a href="photo/big7.jpg" rel="photo/big7.jpg"><img src="photo/7.jpg" class="image6" rel="7" /></a></li>
-                        <li><a href="photo/big8.jpg" rel="photo/big8.jpg"><img src="photo/8.jpg" class="image7" rel="8" /></a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="nph_set_next fl"><span><a href="#" class="prevSet"><img alt="更多图片" src="photo/next.jpg"></a></span><p><a href="#">下一图集 ></a></p></div>
-        </div>
-        <div class="scrollbar-box">
-            <div id="scrollbar" bosszone="photoShowBar" style=" width:528px" class="scrollbar"><a class="nph_btn_scrl scroolbar-handle" href="javascript:void(0)" onfocus="this.blur()" title="拖动工具条以快速查看图片" style="width:100px;"><b class="nph_btn_lt"></b><b class="nph_btn_rt"></b><span class="nph_btn_bd"><span><b class="nph_btn_ct"></b></span></span></a></div>
-        </div>
+    <div class="center-in-center">
+        @*<img id="photo" style="width: 100%;height: 100%;" src="photo/1.jpg" />*@
+        @*<div class="help"></div>*@
     </div>
+<script type="text/javascript">
+    //$(function () {
+    //    var img = new Image();
+    //    img.src = "photo/1.jpg";
+    //    var width = getWidthRate(img.width);
+    //    var height = getHeightRate(img.height);
+    //    $("#photo").attr("src", "photo/10.jpg");
+    //    $("#photo").css("width", width + "%");
+    //    $("#photo").css("height", height + "%");
+    //});
+    $(function() {
+        $(".wrapper").css("height", window.innerHeight);
+        //$(".help").css("width", window.innerWidth);
+        $(".box").css("width", window.innerWidth-3);
+    });
 
-    <div style="text-align:center;clear:both">
-    </div>
+    var aud = document.getElementById("auMusic");
+
+    function playOrPause() {
+        if (aud.paused) {
+            aud.play();
+        } else {
+            aud.pause();
+        }
+    }
+
+    var root = 2;
+    //aud.loop = false;
+    //aud.addEventListener('ended',
+    //    function() {
+
+    //        $("#auMusic").attr("src", "audio/mp3/" + root + ".mp3");
+    //        root += 1;
+    //        if (root > 6) {
+    //            root = 1;
+    //        }
+    //    },
+    //    false);
+
+    function getWidthRate(width) {
+        return Math.round(100 * width / screen.width);
+    }
+
+    function getHeightRate(height) {
+        return Math.round(100 * height / screen.height);
+    }
+</script>
+
+@*定时器*@
+<script type="text/javascript">
+
+    //图片转换
+    var num = 2;
+    var img = new Image();
+    img.src = "photo/" + num + ".jpg";
+    var width = getWidthRate(img.width);
+    var height = getHeightRate(img.height);
+
+    setInterval(function() {
+            $("#photo").attr("src", "photo/" + num + ".jpg");
+            num++;
+            if (num > 3) {
+                num = 1;
+            }
+        },
+        5000);
+
+    //图标旋转
+    var cor = 5;
+    setInterval(function() {
+            $("#imgMuc").css("transform", "rotate(" + cor + "deg)");
+            $("#imgMuc").css("-ms-transform", "rotate(" + cor + "deg)");
+            $("#imgMuc").css("-moz-transform", "rotate(" + cor + "deg)");
+            $("#imgMuc").css("-webkit-transform", "rotate(" + cor + "deg)");
+            $("#imgMuc").css("-o-transform", "rotate(" + cor + "deg)");
+            cor += 5;
+            if (cor > 360) {
+                cor = 5;
+            }
+        },
+        80);
+</script>
+
+@*全屏*@
+<script type="text/javascript">
+    var full = 0;
+    $(".wrapper").click(function () {
+        if (full == 0) {
+            fullscreen();
+            full = 1;
+        } else {
+            exitFullscreen();
+            full = 0;
+        }
+    });
+
+    // 全屏
+    function fullscreen() {
+        var docElm = document.documentElement;
+        if (docElm.requestFullscreen) {
+            docElm.requestFullscreen();
+        } else if (docElm.mozRequestFullScreen) {
+            docElm.mozRequestFullScreen();
+        } else if (docElm.webkitRequestFullScreen) {
+            docElm.webkitRequestFullScreen();
+        } else if (docElm.msRequestFullscreen) {
+            docElm.msRequestFullscreen();
+        }
+    }
+
+    // 退出全屏
+    function exitFullscreen() {
+        if (document.exitFullscreen) {
+            document.exitFullscreen();
+        } else if (document.mozCancelFullScreen) {
+            document.mozCancelFullScreen();
+        } else if (document.webkitCancelFullScreen) {
+            document.webkitCancelFullScreen();
+        } else if (document.msExitFullscreen) {
+            document.msExitFullscreen();
+        }
+    }
+
+    // 监听是否全屏
+    window.onload = function() {
+        var elem = document.getElementById('photo');
+        document.addEventListener('fullscreenchange',
+            function() {
+                elem.innerText = document.fullscreen ? 'yes' : 'no';
+            },
+            false);
+        document.addEventListener('mozfullscreenchange',
+            function() {
+                elem.innerText = document.mozFullScreen ? 'yes' : 'no';
+            },
+            false);
+        document.addEventListener('webkitfullscreenchange',
+            function() {
+                elem.innerText = document.webkitIsFullScreen ? 'yes' : 'no';
+            },
+            false);
+        document.addEventListener('msfullscreenchange',
+            function() {
+                elem.innerText = document.msFullscreenElement ? 'yes' : 'no';
+            },
+            false);
+    }
+</script>
 </body>
 </html>

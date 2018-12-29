@@ -131,18 +131,20 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\PhotoController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="audio\mp3\1.mp3" />
+    <Content Include="audio\mp3\7.mp3" />
     <Content Include="audio\mp3\2.mp3" />
     <Content Include="audio\mp3\4.mp3" />
     <Content Include="audio\mp3\5.mp3" />
     <Content Include="audio\mp3\3.mp3" />
     <Content Include="audio\mp3\6.mp3" />
+    <Content Include="audio\mp3\1.mp3" />
     <Content Include="Content\photo-scan.css" />
     <Content Include="images\ajax-loader.gif" />
     <Content Include="images\body_bg.gif" />
@@ -215,14 +217,17 @@
     <Content Include="Content\Site.css" />
     <None Include="Properties\PublishProfiles\photo.pubxml" />
     <None Include="Scripts\jquery-1.8.2.intellisense.js" />
-    <Content Include="photo\1.JPG" />
+    <Content Include="photo\5.JPG" />
     <Content Include="photo\12.jpg" />
     <Content Include="photo\4.JPG" />
     <Content Include="photo\3.JPG" />
     <Content Include="photo\2.JPG" />
     <Content Include="photo\200_30227a853ade6.jpg" />
     <Content Include="photo\13.jpg" />
+    <Content Include="photo\background1.jpg" />
+    <Content Include="photo\background2.jpg" />
     <Content Include="photo\big1.jpg" />
+    <Content Include="photo\1.jpg" />
     <Content Include="photo\next.jpg" />
     <Content Include="photo\prev.jpg" />
     <Content Include="Scripts\jquery-1.8.2.js" />
@@ -254,6 +259,7 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\Image.cshtml" />
+    <Content Include="Views\Photo\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

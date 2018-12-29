@@ -2,19 +2,36 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    @*<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />*@
     <title>login validate</title>
     <script src="~/Scripts/jquery-1.8.2.min.js"></script>
     <style type="text/css">
-        html,body,div{
+        body {
             margin: 0;
             padding: 0;
             height: 100%;
             overflow: hidden;
-            background-size:contain
+            background-size: contain;
         }
-        div{
-            background-color: #FFF8DC;
+
+        .header {
+            width: 100%;
+            height: 80px;
+            vertical-align: middle;
         }
+
+        .center{
+            width: 300px;
+            height: 80%;
+            border: 10px solid #658ef1;
+            margin: auto auto;
+        }
+
+        .bottom{
+            width: 100%;
+            height: 100px;
+        }
+
         .div_music{
             position: fixed;
             top: 30px;
@@ -33,160 +50,154 @@
             -o-transform: rotate(30deg); /* Opera style="visibility:hidden"*/
         }
 
+        
+
 
     </style>
 </head>
 <body>
-<div id="base">
+<div style="margin: 0;padding: 0;">
     <img id="imgMuc" class="div_music" src="~/images/music1.png" onclick="playOrPause()" />
-    <img id="photo" style="width: 100%;height: 100%"/>
-    @*<div >
+
+    <div class="header">
+        <span style="height: 100px;width: 100%;background-color: #658ef1"><label style="height: 100%;vertical-align: middle;font-size: large">2019</label></span>
+    </div>
+
+    <div class="center">
+        <img id="photo" style="width: 100%;height: 100%;margin: 0;padding: 0;vertical-align:bottom" src="photo/1.jpg"/>
+    </div>
+    <div style="visibility: hidden">
         <audio id="auMusic" autoplay="autoplay" src="~/audio/mp3/1.mp3">
             does not support.
         </audio>
-    </div>*@
+    </div>
+    <div class="bottom"></div>
 </div>
-    
-<script type="text/javascript">
-    $(function () {
+    <script type="text/javascript">
+
+        //$(function () {
+        //    $(".container").css("height", screen.height);
+        //    $(".container").css("width", screen.width);
+        //});
+
+        var aud = document.getElementById("auMusic");
+
+        function playOrPause() {
+            if (aud.paused) {
+                aud.play();
+            } else {
+                aud.pause();
+            }
+        }
+
+        var root = 2;
+        aud.loop = false;
+        aud.addEventListener('ended', function () {
+
+            $("#auMusic").attr("src", "audio/mp3/" + root + ".mp3");
+            root += 1;
+            if (root > 6) {
+                root = 1;
+            }
+        }, false);
+
+
+    </script>
+
+    @*定时器*@
+    <script type="text/javascript">
+
+        //图片转换
+        var num = 2;
         var img = new Image();
-        img.src = "photo/1.jpg";
-        var width = getWidthRate(img.width);
-        var height = getHeightRate(img.height);
-        $("#photo").attr("src", "photo/10.jpg");
-        $("#photo").css("width", width + "%");
-        $("#photo").css("height", height + "%");
-    });
+        img.src = "photo/" + num + ".jpg";
+        setInterval(function () {
+            $("#photo").attr("src", "photo/" + num + ".jpg");
 
-    var aud = document.getElementById("auMusic");
+            num++;
+            if (num > 3) {
+                num = 1;
+            }
+        }, 5000);
 
-    function playOrPause() {
-        if (aud.paused) {
-            aud.play();
-        } else {
-            aud.pause();
+        //图标旋转
+        var cor = 5;
+        setInterval(function () {
+            $("#imgMuc").css("transform", "rotate(" + cor + "deg)");
+            $("#imgMuc").css("-ms-transform", "rotate(" + cor + "deg)");
+            $("#imgMuc").css("-moz-transform", "rotate(" + cor + "deg)");
+            $("#imgMuc").css("-webkit-transform", "rotate(" + cor + "deg)");
+            $("#imgMuc").css("-o-transform", "rotate(" + cor + "deg)");
+            cor += 5;
+            if (cor > 360) {
+                cor = 5;
+            }
+        }, 80);
+    </script>
+
+    @*全屏*@
+    <script type="text/javascript">
+        var full = 0;
+        $("#photo").click(function () {
+            if (full == 0) {
+                fullscreen();
+                full = 1;
+            } else {
+                exitFullscreen();
+                full = 0;
+            }
+        });
+        // 全屏
+        function fullscreen() {
+            var docElm = document.documentElement;
+            if (docElm.requestFullscreen) {
+                docElm.requestFullscreen();
+            } else if (docElm.mozRequestFullScreen) {
+                docElm.mozRequestFullScreen();
+            } else if (docElm.webkitRequestFullScreen) {
+                docElm.webkitRequestFullScreen();
+            } else if (docElm.msRequestFullscreen) {
+                docElm.msRequestFullscreen();
+            }
         }
-    }
 
-    var root = 2;
-    aud.loop = false;
-    aud.addEventListener('ended', function () {
-        
-        $("#auMusic").attr("src", "audio/mp3/" + root + ".mp3");
-        root += 1;
-        if (root > 6) {
-            root = 1;
+        // 退出全屏
+        function exitFullscreen() {
+            if (document.exitFullscreen) {
+                document.exitFullscreen();
+            } else if (document.mozCancelFullScreen) {
+                document.mozCancelFullScreen();
+            } else if (document.webkitCancelFullScreen) {
+                document.webkitCancelFullScreen();
+            } else if (document.msExitFullscreen) {
+                document.msExitFullscreen();
+            }
         }
-    }, false);
 
-    function getWidthRate(width) {
-        return Math.round(100 * width / screen.width);
-    }
-
-    function getHeightRate(height) {
-        return Math.round(100 * height / screen.height);
-    }
-</script>
-
-@*定时器*@
-<script type="text/javascript">
-
-    //图片转换
-    var num = 2;
-    var img = new Image();
-    img.src = "photo/" + num + ".jpg";
-    var width = getWidthRate(img.width);
-    var height = getHeightRate(img.height);
-
-    setInterval(function () {
-        $("#photo").attr("src", "photo/" + num + ".jpg");
-        $("#photo").css("width", width + "%");
-        $("#photo").css("height", height + "%");
-        
-        num++;
-        if (num > 4) {
-            num = 1;
+        // 监听是否全屏
+        window.onload = function () {
+            var elem = document.getElementById('photo');
+            document.addEventListener('fullscreenchange',
+                function () {
+                    elem.innerText = document.fullscreen ? 'yes' : 'no';
+                },
+                false);
+            document.addEventListener('mozfullscreenchange',
+                function () {
+                    elem.innerText = document.mozFullScreen ? 'yes' : 'no';
+                },
+                false);
+            document.addEventListener('webkitfullscreenchange',
+                function () {
+                    elem.innerText = document.webkitIsFullScreen ? 'yes' : 'no';
+                },
+                false);
+            document.addEventListener('msfullscreenchange',
+                function () {
+                    elem.innerText = document.msFullscreenElement ? 'yes' : 'no';
+                },
+                false);
         }
-    }, 5000);
-
-    //图标旋转
-    var cor = 5;
-    setInterval(function () {
-        $("#imgMuc").css("transform", "rotate(" + cor + "deg)");
-        $("#imgMuc").css("-ms-transform", "rotate(" + cor + "deg)");
-        $("#imgMuc").css("-moz-transform", "rotate(" + cor + "deg)");
-        $("#imgMuc").css("-webkit-transform", "rotate(" + cor + "deg)");
-        $("#imgMuc").css("-o-transform", "rotate(" + cor + "deg)");
-        cor += 5;
-        if (cor > 360) {
-            cor = 5;
-        }
-    }, 80);
-</script>
-
-@*全屏*@
-<script type="text/javascript">
-    var full = 0;
-    $("#photo").click(function () {
-        if (full == 0) {
-            fullscreen();
-            full=1;
-        } else {
-            exitFullscreen();
-            full = 0;
-        }
-    });
-    // 全屏
-    function fullscreen() {
-        var docElm = document.documentElement;
-        if (docElm.requestFullscreen) {
-            docElm.requestFullscreen();
-        } else if (docElm.mozRequestFullScreen) {
-            docElm.mozRequestFullScreen();
-        } else if (docElm.webkitRequestFullScreen) {
-            docElm.webkitRequestFullScreen();
-        } else if (docElm.msRequestFullscreen) {
-            docElm.msRequestFullscreen();
-        }
-    }
-
-    // 退出全屏
-    function exitFullscreen() {
-        if (document.exitFullscreen) {
-            document.exitFullscreen();
-        } else if (document.mozCancelFullScreen) {
-            document.mozCancelFullScreen();
-        } else if (document.webkitCancelFullScreen) {
-            document.webkitCancelFullScreen();
-        } else if (document.msExitFullscreen) {
-            document.msExitFullscreen();
-        }
-    }
-
-    // 监听是否全屏
-    window.onload = function () {
-        var elem = document.getElementById('photo');
-        document.addEventListener('fullscreenchange',
-            function () {
-                elem.innerText = document.fullscreen ? 'yes' : 'no';
-            },
-            false);
-        document.addEventListener('mozfullscreenchange',
-            function () {
-                elem.innerText = document.mozFullScreen ? 'yes' : 'no';
-            },
-            false);
-        document.addEventListener('webkitfullscreenchange',
-            function () {
-                elem.innerText = document.webkitIsFullScreen ? 'yes' : 'no';
-            },
-            false);
-        document.addEventListener('msfullscreenchange',
-            function () {
-                elem.innerText = document.msFullscreenElement ? 'yes' : 'no';
-            },
-            false);
-    }
-</script>
+    </script>
 </body>
 </html>

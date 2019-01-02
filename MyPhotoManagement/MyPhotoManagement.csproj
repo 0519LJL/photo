@@ -228,6 +228,7 @@
     <Content Include="photo\background2.jpg" />
     <Content Include="photo\big1.jpg" />
     <Content Include="photo\1.jpg" />
+    <Content Include="photo\jiao.png" />
     <Content Include="photo\next.jpg" />
     <Content Include="photo\prev.jpg" />
     <Content Include="Scripts\jquery-1.8.2.js" />

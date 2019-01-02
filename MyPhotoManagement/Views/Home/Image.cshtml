@@ -6,7 +6,7 @@
     <title>login validate</title>
     <script src="~/Scripts/jquery-1.8.2.min.js"></script>
     <style type="text/css">
-        body {
+        body, .container {
             margin: 0;
             padding: 0;
             height: 100%;
@@ -15,31 +15,109 @@
         }
 
         .header {
+            /*background-color: #85d989;*/
             width: 100%;
-            height: 80px;
-            vertical-align: middle;
+            position: absolute;
+            height: 10%;
         }
 
-        .center{
-            width: 300px;
-            height: 80%;
-            border: 10px solid #658ef1;
-            margin: auto auto;
-        }
-
-        .bottom{
+        .center {
+            /*background-color: #0094ff;*/
             width: 100%;
-            height: 100px;
+            position: absolute;
+            top: 10%;
+            height: 60%;
+            text-align: center;
+            margin: auto 0;
+
         }
 
-        .div_music{
-            position: fixed;
+        .bottom {
+            background-color: #cc85d9;
+            width: 100%;
+            position: absolute;
+            top: 70%;
+            bottom: 0px;
+        }
+
+        .div_music {
+            position: absolute;
             top: 30px;
             right: 30px;
             z-index: 1;
-            /*opacity: 0;*/ 
             height: 20px;
-            width: 20px; 
+            width: 20px;
+        }
+
+        .title {
+            /*position: absolute;*/
+            top: 0;
+            left: 5px;
+            z-index: 1;
+            height: 100%;
+            vertical-align: bottom;
+            width: 60%;
+            /*background-color: #808080;*/
+            margin: auto 0;
+        }
+
+        .photo{
+            height: 100%;
+            width: 80%;
+            background-color: #808080;
+            margin:  5px auto;
+            /*position: absolute;*/
+        }
+
+        .jiao1 {
+            position: absolute;
+            top: 5px;
+            left: 10%;
+            z-index: 1;
+            height: 45px;
+            width: 45px;
+        }
+
+        .jiao2 {
+            position: absolute;
+            top: 5px;
+            right: 10%;
+            z-index: 1;
+            height: 45px;
+            width: 45px;
+            transform: rotate(90deg);
+            -ms-transform: rotate(90deg); /* IE 9 */
+            -moz-transform: rotate(90deg); /* Firefox */
+            -webkit-transform: rotate(90deg); /* Safari and Chrome */
+            -o-transform: rotate(90deg); /* Opera style="visibility:hidden"*/
+        }
+
+        .jiao3 {
+            position: absolute;
+            bottom: 0;
+            left: 10%;
+            z-index: 1;
+            height: 45px;
+            width: 45px;
+            transform: rotate(-90deg);
+            -ms-transform: rotate(-90deg); /* IE 9 */
+            -moz-transform: rotate(-90deg); /* Firefox */
+            -webkit-transform: rotate(-90deg); /* Safari and Chrome */
+            -o-transform: rotate(-90deg); /* Opera style="visibility:hidden"*/
+        }
+
+        .jiao4 {
+            position: absolute;
+            bottom: 0;
+            right: 10%;
+            z-index: 1;
+            height: 45px;
+            width: 45px;
+            transform: rotate(-180deg);
+            -ms-transform: rotate(-180deg); /* IE 9 */
+            -moz-transform: rotate(-180deg); /* Firefox */
+            -webkit-transform: rotate(-180deg); /* Safari and Chrome */
+            -o-transform: rotate(-180deg); /* Opera style="visibility:hidden"*/
         }
 
         .open {
@@ -49,30 +127,41 @@
             -webkit-transform: rotate(30deg); /* Safari and Chrome */
             -o-transform: rotate(30deg); /* Opera style="visibility:hidden"*/
         }
-
-        
-
-
     </style>
 </head>
 <body>
-<div style="margin: 0;padding: 0;">
+<div class="header">
     <img id="imgMuc" class="div_music" src="~/images/music1.png" onclick="playOrPause()" />
-
-    <div class="header">
-        <span style="height: 100px;width: 100%;background-color: #658ef1"><label style="height: 100%;vertical-align: middle;font-size: large">2019</label></span>
-    </div>
-
-    <div class="center">
+    <div class="title"><label style="position: absolute;bottom:10px;left: 5px;font-size: 30px;font-weight: bold">123456</label></div>
+</div>
+<div class="center">
+    <div class="photo">
+        <img class="jiao1" src="~/photo/jiao.png"/>
+        <img class="jiao2" src="~/photo/jiao.png"/>
+        <img class="jiao3" src="~/photo/jiao.png"/>
+        <img class="jiao4" src="~/photo/jiao.png"/>
         <img id="photo" style="width: 100%;height: 100%;margin: 0;padding: 0;vertical-align:bottom" src="photo/1.jpg"/>
     </div>
-    <div style="visibility: hidden">
-        <audio id="auMusic" autoplay="autoplay" src="~/audio/mp3/1.mp3">
-            does not support.
-        </audio>
-    </div>
-    <div class="bottom"></div>
 </div>
+    <div class="bottom"></div>
+    @*<div class="container" style="background-image: url(photo/background1.jpg)">
+            <div class="header">
+                <span style="height: 100px;width: 100%;background-color: #658ef1"><label style="height: 100%;vertical-align: middle;font-size: large"></label></span>
+                <img id="imgMuc" class="div_music" src="~/images/music1.png" onclick="playOrPause()"/>
+            </div>
+
+            <div class="center">
+                <img id="photo" style="width: 100%;height: 100%;margin: 0;padding: 0;vertical-align:bottom" src="photo/1.jpg"/>
+            </div>
+            <div style="visibility: hidden">
+                <audio id="auMusic" autoplay="autoplay" src="~/audio/mp3/1.mp3">
+                    does not support.
+                </audio>
+            </div>
+            <div class="bottom">
+                <span style="height: 100%"><label>woxiangyaofei</label></span>
+            </div>
+        </div>*@
     <script type="text/javascript">
 
         //$(function () {
@@ -92,14 +181,16 @@
 
         var root = 2;
         aud.loop = false;
-        aud.addEventListener('ended', function () {
+        aud.addEventListener('ended',
+            function () {
 
-            $("#auMusic").attr("src", "audio/mp3/" + root + ".mp3");
-            root += 1;
-            if (root > 6) {
-                root = 1;
-            }
-        }, false);
+                $("#auMusic").attr("src", "audio/mp3/" + root + ".mp3");
+                root += 1;
+                if (root > 6) {
+                    root = 1;
+                }
+            },
+            false);
 
 
     </script>
@@ -118,7 +209,8 @@
             if (num > 3) {
                 num = 1;
             }
-        }, 5000);
+        },
+            5000);
 
         //图标旋转
         var cor = 5;
@@ -132,7 +224,8 @@
             if (cor > 360) {
                 cor = 5;
             }
-        }, 80);
+        },
+            80);
     </script>
 
     @*全屏*@
@@ -147,6 +240,7 @@
                 full = 0;
             }
         });
+
         // 全屏
         function fullscreen() {
             var docElm = document.documentElement;

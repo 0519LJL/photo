@@ -46,6 +46,7 @@ D:\MyProject\MyPhotoManagement\MyPhotoManagement\bin\zh-Hans\System.Web.WebPages
 D:\MyProject\MyPhotoManagement\MyPhotoManagement\bin\zh-Hans\System.Web.WebPages.Razor.resources.dll
 D:\MyProject\MyPhotoManagement\MyPhotoManagement\obj\Debug\MyPhotoManagement.dll
 D:\MyProject\MyPhotoManagement\MyPhotoManagement\obj\Debug\MyPhotoManagement.pdb
+D:\MyProject\MyPhotoManagement\MyPhotoManagement\obj\Debug\MyPhotoManagement.csprojResolveAssemblyReference.cache
 D:\mygitproject\photo\MyPhotoManagement\bin\MyPhotoManagement.dll
 D:\mygitproject\photo\MyPhotoManagement\bin\MyPhotoManagement.pdb
 D:\mygitproject\photo\MyPhotoManagement\bin\Antlr3.Runtime.dll
@@ -93,5 +94,3 @@ D:\mygitproject\photo\MyPhotoManagement\bin\zh-Hans\System.Web.WebPages.Deployme
 D:\mygitproject\photo\MyPhotoManagement\bin\zh-Hans\System.Web.WebPages.Razor.resources.dll
 D:\mygitproject\photo\MyPhotoManagement\obj\Debug\MyPhotoManagement.dll
 D:\mygitproject\photo\MyPhotoManagement\obj\Debug\MyPhotoManagement.pdb
-D:\mygitproject\photo\MyPhotoManagement\obj\Debug\MyPhotoManagement.csprojResolveAssemblyReference.cache
-D:\MyProject\MyPhotoManagement\MyPhotoManagement\obj\Debug\MyPhotoManagement.csprojResolveAssemblyReference.cache

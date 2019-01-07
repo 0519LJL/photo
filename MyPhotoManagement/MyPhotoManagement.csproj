@@ -158,6 +158,9 @@
     <Content Include="images\scroll-auto-bg.png" />
     <Content Include="images\scrollBgline.gif" />
     <Content Include="images\sel-bg.gif" />
+    <Content Include="photo\xiang6.png" />
+    <Content Include="photo\xiang5.png" />
+    <Content Include="photo\xiang4.png" />
     <Content Include="photo\1.jpg" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />

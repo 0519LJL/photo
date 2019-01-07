@@ -21,12 +21,17 @@
             height: 10%;
         }
 
+        /*翻转*/
+        .div_xiang {
+            transform: scale(-1,1);
+        }
+
         .center {
             background-color: #0094ff;
             width: 100%;
             position: absolute;
             top: 10%;
-            height: 60%;
+            height: 63%;
             text-align: center;
             margin: auto 0;
         }
@@ -35,7 +40,7 @@
             background-color: #0094ff;
             width: 100%;
             position: absolute;
-            top: 70%;
+            top: 73%;
             bottom: 0px;
         }
 
@@ -65,58 +70,24 @@
             width: 80%;
             background-color: #808080;
             margin: 5px auto;
-            /*position: absolute;*/
+        }
+
+        .div_xiang {
+            position: absolute;
+            top: 5px;
+            right: 10%;
+            z-index: 1;
+            height: 100%;
+            width: 80%;
         }
 
         .jiao1 {
             position: absolute;
-            top: 5px;
+            top: -5px;
             left: 10%;
             z-index: 1;
-            height: 45px;
-            width: 45px;
-        }
-
-        .jiao2 {
-            position: absolute;
-            top: 5px;
-            right: 10%;
-            z-index: 1;
-            height: 45px;
-            width: 45px;
-            transform: rotate(90deg);
-            -ms-transform: rotate(90deg); /* IE 9 */
-            -moz-transform: rotate(90deg); /* Firefox */
-            -webkit-transform: rotate(90deg); /* Safari and Chrome */
-            -o-transform: rotate(90deg); /* Opera style="visibility:hidden"*/
-        }
-
-        .jiao3 {
-            position: absolute;
-            bottom: 0;
-            left: 10%;
-            z-index: 1;
-            height: 45px;
-            width: 45px;
-            transform: rotate(-90deg);
-            -ms-transform: rotate(-90deg); /* IE 9 */
-            -moz-transform: rotate(-90deg); /* Firefox */
-            -webkit-transform: rotate(-90deg); /* Safari and Chrome */
-            -o-transform: rotate(-90deg); /* Opera style="visibility:hidden"*/
-        }
-
-        .jiao4 {
-            position: absolute;
-            bottom: 0;
-            right: 10%;
-            z-index: 1;
-            height: 45px;
-            width: 45px;
-            transform: rotate(-180deg);
-            -ms-transform: rotate(-180deg); /* IE 9 */
-            -moz-transform: rotate(-180deg); /* Firefox */
-            -webkit-transform: rotate(-180deg); /* Safari and Chrome */
-            -o-transform: rotate(-180deg); /* Opera style="visibility:hidden"*/
+            height: 100%;
+            width: 80%;
         }
 
         .open {
@@ -152,22 +123,20 @@
     <div class="header">
         <img id="imgMuc" class="div_music" src="~/images/music1.png" onclick="playOrPause()" />
         <div class="title">
-            <label style="position: absolute; bottom: 5px; left: 5px; font-family: YouYuan; font-size: 30px; font-weight: bold">123456</label>
+            <label style="position: absolute; bottom: 5px; left: 5px; font-family: LiSu; font-size: 30px; font-weight: bold">哈哈哈</label>
         </div>
     </div>
     <div class="center">
         <div class="div_photo">
-            <img class="jiao1" src="~/photo/jiao.png" />
-            <img class="jiao2" src="~/photo/jiao.png" />
-            <img class="jiao3" src="~/photo/jiao.png" />
-            <img class="jiao4" src="~/photo/jiao.png" />
+            <img id="xiang" class="div_xiang" src="photo/xiang6.png"/>
             <img id="photo" style="width: 100%; height: 100%; margin: 0; padding: 0; vertical-align: bottom" src="photo/1.jpg" />
-            @*<img class="kuang"   style="width: 100%; height: 100%;" src="~/photo/xiang2.png" />*@
         </div>
     </div>
     <div class="bottom">
         <div class="div_bot_font">
-            <label style="position: absolute; top: 15px; left: 10px; font-size: 35px; font-weight: bold">123456</label>
+            <label style="position: absolute; top: 20px; left: 10px; font-size: 22px; font-weight: bold;font-family: STLiti">爱不单行相信他</label>
+            <label style="position: absolute; top: 55px; left: 10px; font-size: 22px; font-weight: bold;font-family: STLiti">爱不单行相信他</label>
+            <label style="position: absolute; top: 85px; left: 10px; font-size: 22px; font-weight: bold;font-family: STLiti">爱不单行相信他</label>
         </div>
         <div class="div_bot_ph">
             <img id="bot_img" style="height: 100%; width: 100%; position: absolute;" src="~/photo/dong3.gif" />
@@ -175,9 +144,9 @@
 
     </div>
     <div style="visibility: hidden">
-        <audio id="auMusic" autoplay="autoplay" src="~/audio/mp3/1.mp3">
+        @*<audio id="auMusic" autoplay="autoplay" src="~/audio/mp3/1.mp3">
             does not support.
-        </audio>
+        </audio>*@
     </div>
     <script type="text/javascript">
 

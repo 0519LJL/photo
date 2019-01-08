@@ -8,6 +8,7 @@
     <LastUsedBuildConfiguration>Release</LastUsedBuildConfiguration>
     <LastUsedPlatform>Any CPU</LastUsedPlatform>
     <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>D:\WebSite\photo</_PublishTargetUrl>
   </PropertyGroup>
   <ItemGroup>
     <File Include="audio/mp3/1.mp3">
@@ -44,19 +45,19 @@
       <publishTime>12/27/2018 22:11:32</publishTime>
     </File>
     <File Include="bin/MyPhotoManagement.dll">
-      <publishTime>01/02/2019 22:44:13</publishTime>
+      <publishTime>01/09/2019 00:11:52</publishTime>
     </File>
     <File Include="bin/Newtonsoft.Json.dll">
       <publishTime>12/27/2018 22:11:33</publishTime>
     </File>
     <File Include="bin/System.Net.Http.dll">
-      <publishTime>07/10/2012 21:52:12</publishTime>
+      <publishTime>07/09/2013 11:04:48</publishTime>
     </File>
     <File Include="bin/System.Net.Http.Formatting.dll">
       <publishTime>12/27/2018 22:11:32</publishTime>
     </File>
     <File Include="bin/System.Net.Http.WebRequest.dll">
-      <publishTime>07/10/2012 21:52:12</publishTime>
+      <publishTime>07/09/2013 11:04:48</publishTime>
     </File>
     <File Include="bin/System.Web.Http.dll">
       <publishTime>12/27/2018 22:11:32</publishTime>
@@ -95,10 +96,10 @@
       <publishTime>12/27/2018 22:11:32</publishTime>
     </File>
     <File Include="bin/zh-Hans/System.Net.Http.resources.dll">
-      <publishTime>07/10/2012 23:31:08</publishTime>
+      <publishTime>07/09/2013 11:34:42</publishTime>
     </File>
     <File Include="bin/zh-Hans/System.Net.Http.WebRequest.resources.dll">
-      <publishTime>07/10/2012 23:31:08</publishTime>
+      <publishTime>07/09/2013 11:34:40</publishTime>
     </File>
     <File Include="bin/zh-Hans/System.Web.Http.resources.dll">
       <publishTime>12/27/2018 22:11:32</publishTime>
@@ -338,7 +339,7 @@
       <publishTime>12/27/2018 22:18:32</publishTime>
     </File>
     <File Include="photo/1.jpg">
-      <publishTime>01/02/2019 22:43:34</publishTime>
+      <publishTime>12/27/2018 22:11:32</publishTime>
     </File>
     <File Include="photo/10.jpg">
       <publishTime>12/27/2018 22:11:32</publishTime>
@@ -391,11 +392,26 @@
     <File Include="photo/prev.jpg">
       <publishTime>12/27/2018 22:11:32</publishTime>
     </File>
+    <File Include="photo/title.png">
+      <publishTime>01/08/2019 21:16:56</publishTime>
+    </File>
+    <File Include="photo/xiang1.png">
+      <publishTime>01/07/2019 23:28:37</publishTime>
+    </File>
     <File Include="photo/xiang2.png">
-      <publishTime>01/02/2019 21:48:11</publishTime>
+      <publishTime>01/08/2019 21:31:45</publishTime>
     </File>
     <File Include="photo/xiang3.jpg">
       <publishTime>01/02/2019 21:46:16</publishTime>
+    </File>
+    <File Include="photo/xiang4.png">
+      <publishTime>01/04/2019 22:40:01</publishTime>
+    </File>
+    <File Include="photo/xiang5.png">
+      <publishTime>01/04/2019 22:46:00</publishTime>
+    </File>
+    <File Include="photo/xiang6.png">
+      <publishTime>01/07/2019 23:28:37</publishTime>
     </File>
     <File Include="Scripts/jquery-1.8.2.js">
       <publishTime>12/27/2018 22:18:32</publishTime>
@@ -443,7 +459,7 @@
       <publishTime>12/27/2018 22:11:32</publishTime>
     </File>
     <File Include="Views/Home/Image.cshtml">
-      <publishTime>01/02/2019 22:44:03</publishTime>
+      <publishTime>01/09/2019 00:11:32</publishTime>
     </File>
     <File Include="Views/Home/Index.cshtml">
       <publishTime>01/02/2019 21:05:52</publishTime>

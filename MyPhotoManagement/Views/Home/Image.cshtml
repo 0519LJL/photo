@@ -15,7 +15,7 @@
         }
 
         .header {
-            background-color: #0094ff;
+            background-color: #f8d9d9;
             width: 100%;
             position: absolute;
             height: 10%;
@@ -27,7 +27,7 @@
         }
 
         .center {
-            background-color: #0094ff;
+            background-color: #f8d9d9;
             width: 100%;
             position: absolute;
             top: 10%;
@@ -37,7 +37,7 @@
         }
 
         .bottom {
-            background-color: #0094ff;
+            background-color: #f8d9d9;
             width: 100%;
             position: absolute;
             top: 73%;
@@ -66,19 +66,20 @@
         }
 
         .div_photo {
-            height: 100%;
+            height: 98%;
             width: 80%;
-            background-color: #808080;
+            background-color: #f8d9d9;
             margin: 5px auto;
         }
 
         .div_xiang {
             position: absolute;
-            top: 5px;
-            right: 10%;
+            top: 0px;
+            left: 10%;
             z-index: 1;
             height: 100%;
             width: 80%;
+            border-radius:20px;
         }
 
         .jiao1 {
@@ -117,26 +118,42 @@
             width: 80%;
             /*background-color: #e49e6d;*/
         }
+
+        .title_le_img {
+            height: 30px;
+            width: 30px;
+            transform: rotateY(180deg);
+        }
+
+        .title_ri_img {
+            height: 30px;
+            width: 30px;
+        }
+
     </style>
 </head>
 <body>
     <div class="header">
         <img id="imgMuc" class="div_music" src="~/images/music1.png" onclick="playOrPause()" />
         <div class="title">
-            <label style="position: absolute; bottom: 5px; left: 5px; font-family: LiSu; font-size: 30px; font-weight: bold">哈哈哈</label>
+            <label style="position: absolute; bottom: 5px; left: 10px; font-family: YouYuan; font-size: 30px; font-weight: bold"><img class="title_le_img" src="~/photo/title.png" />哈哈哈<img class="title_ri_img" src="~/photo/title.png" /></label>
         </div>
     </div>
     <div class="center">
         <div class="div_photo">
-            <img id="xiang" class="div_xiang" src="photo/xiang6.png"/>
-            <img id="photo" style="width: 100%; height: 100%; margin: 0; padding: 0; vertical-align: bottom" src="photo/1.jpg" />
+            <img id="xiang" class="div_xiang" src="photo/xiang1.png"/>
+            <img id="photo" style="width: 100%; height: 100%; margin: 0; padding: 0; vertical-align: bottom;border-radius:25px;" src="photo/1.jpg" />
         </div>
     </div>
     <div class="bottom">
         <div class="div_bot_font">
-            <label style="position: absolute; top: 20px; left: 10px; font-size: 22px; font-weight: bold;font-family: STLiti">爱不单行相信他</label>
-            <label style="position: absolute; top: 55px; left: 10px; font-size: 22px; font-weight: bold;font-family: STLiti">爱不单行相信他</label>
-            <label style="position: absolute; top: 85px; left: 10px; font-size: 22px; font-weight: bold;font-family: STLiti">爱不单行相信他</label>
+            <marquee direction=up behavior=scroll scrollamount=1 scrolldelay=10 align="left" style="position: absolute;top: 15px; left: 15px;height:80%;width:200px;font-size: 15px;font-weight:bold " >
+                <p>我试试</p>
+                <p>第一段</p>
+                <p style="text-indent:1em;"> MARQUEE 元素的默认宽度与其父元素的宽度相等。如果 MARQUEE 位于没有指定宽度的 TD 内，你就需要明确设置 MARQUEE 的宽度。如果 MARQUEE 和 TD 的宽度都没有指定，那么滚动字幕就将限定于 1 个像素宽。</p>
+                <p>第三段</p>
+                <p>第四段</p>
+            </marquee>    
         </div>
         <div class="div_bot_ph">
             <img id="bot_img" style="height: 100%; width: 100%; position: absolute;" src="~/photo/dong3.gif" />
@@ -144,9 +161,9 @@
 
     </div>
     <div style="visibility: hidden">
-        @*<audio id="auMusic" autoplay="autoplay" src="~/audio/mp3/1.mp3">
+        <audio id="auMusic" autoplay="autoplay" src="~/audio/mp3/1.mp3">
             does not support.
-        </audio>*@
+        </audio>
     </div>
     <script type="text/javascript">
 
@@ -193,12 +210,25 @@
 
         //图片转换
         var num = 2;
+        var num_xiang = 1;
+        var loop_xiang = 6;
         setInterval(function () {
-            $("#photo").attr("src", "photo/" + num + ".jpg");
-            num++;
-            if (num > 3) {
-                num = 1;
-            }
+            $(".div_photo").fadeOut(800, function () {
+                $("#photo").attr("src", "photo/" + num + ".jpg");
+                $(".div_xiang").attr("src", "photo/xiang" + num_xiang + ".png");
+                num++;
+                if (parseInt(num / loop_xiang) == 0) {
+                    num_xiang++;
+                }
+
+                if (num > 3) {
+                    num = 1;
+                }
+                if (num_xiang > loop_xiang) {
+                    num_xiang = 1;
+                }
+                $(".div_photo").fadeIn(600);
+            })
         },
             5000);
 
@@ -221,7 +251,7 @@
     @*全屏*@
     <script type="text/javascript">
         var full = 0;
-        $("#photo").click(function () {
+        $(".div_photo").click(function () {
             if (full == 0) {
                 fullscreen();
                 full = 1;

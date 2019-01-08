@@ -94,5 +94,5 @@ D:\mygitproject\photo\MyPhotoManagement\bin\zh-Hans\System.Web.WebPages.Deployme
 D:\mygitproject\photo\MyPhotoManagement\bin\zh-Hans\System.Web.WebPages.Razor.resources.dll
 D:\mygitproject\photo\MyPhotoManagement\obj\Debug\MyPhotoManagement.dll
 D:\mygitproject\photo\MyPhotoManagement\obj\Debug\MyPhotoManagement.pdb
-D:\mygitproject\photo\MyPhotoManagement\obj\Debug\MyPhotoManagement.csprojResolveAssemblyReference.cache
 D:\mygitproject\photo\MyPhotoManagement\bin\MyPhotoManagement.dll.config
+D:\mygitproject\photo\MyPhotoManagement\obj\Debug\MyPhotoManagement.csprojResolveAssemblyReference.cache

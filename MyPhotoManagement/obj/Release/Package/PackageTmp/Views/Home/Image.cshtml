@@ -15,28 +15,32 @@
         }
 
         .header {
-            background-color: #0094ff;
+            background-color: #f8d9d9;
             width: 100%;
             position: absolute;
             height: 10%;
         }
 
+        /*翻转*/
+        .div_xiang {
+            transform: scale(-1,1);
+        }
+
         .center {
-            background-color: #0094ff;
+            background-color: #f8d9d9;
             width: 100%;
             position: absolute;
             top: 10%;
-            height: 60%;
+            height: 63%;
             text-align: center;
             margin: auto 0;
-
         }
 
         .bottom {
-            background-color: #0094ff;
+            background-color: #f8d9d9;
             width: 100%;
             position: absolute;
-            top: 70%;
+            top: 73%;
             bottom: 0px;
         }
 
@@ -61,63 +65,30 @@
             margin: auto 0;
         }
 
-        .div_photo{
+        .div_photo {
+            height: 98%;
+            width: 80%;
+            background-color: #f8d9d9;
+            margin: 5px auto;
+        }
+
+        .div_xiang {
+            position: absolute;
+            top: 0px;
+            left: 10%;
+            z-index: 1;
             height: 100%;
             width: 80%;
-            background-color: #808080;
-            margin:  5px auto;
-            /*position: absolute;*/
+            border-radius:20px;
         }
 
         .jiao1 {
             position: absolute;
-            top: 5px;
+            top: -5px;
             left: 10%;
             z-index: 1;
-            height: 45px;
-            width: 45px;
-        }
-
-        .jiao2 {
-            position: absolute;
-            top: 5px;
-            right: 10%;
-            z-index: 1;
-            height: 45px;
-            width: 45px;
-            transform: rotate(90deg);
-            -ms-transform: rotate(90deg); /* IE 9 */
-            -moz-transform: rotate(90deg); /* Firefox */
-            -webkit-transform: rotate(90deg); /* Safari and Chrome */
-            -o-transform: rotate(90deg); /* Opera style="visibility:hidden"*/
-        }
-
-        .jiao3 {
-            position: absolute;
-            bottom: 0;
-            left: 10%;
-            z-index: 1;
-            height: 45px;
-            width: 45px;
-            transform: rotate(-90deg);
-            -ms-transform: rotate(-90deg); /* IE 9 */
-            -moz-transform: rotate(-90deg); /* Firefox */
-            -webkit-transform: rotate(-90deg); /* Safari and Chrome */
-            -o-transform: rotate(-90deg); /* Opera style="visibility:hidden"*/
-        }
-
-        .jiao4 {
-            position: absolute;
-            bottom: 0;
-            right: 10%;
-            z-index: 1;
-            height: 45px;
-            width: 45px;
-            transform: rotate(-180deg);
-            -ms-transform: rotate(-180deg); /* IE 9 */
-            -moz-transform: rotate(-180deg); /* Firefox */
-            -webkit-transform: rotate(-180deg); /* Safari and Chrome */
-            -o-transform: rotate(-180deg); /* Opera style="visibility:hidden"*/
+            height: 100%;
+            width: 80%;
         }
 
         .open {
@@ -134,9 +105,10 @@
             right: 5px;
             z-index: 1;
             height: 150px;
-            width: 120px;
+            width: 150px;
             /*background-color: #b6ff00;*/
         }
+
         .div_bot_font {
             position: absolute;
             top: 5px;
@@ -146,61 +118,54 @@
             width: 80%;
             /*background-color: #e49e6d;*/
         }
+
+        .title_le_img {
+            height: 30px;
+            width: 30px;
+            transform: rotateY(180deg);
+        }
+
+        .title_ri_img {
+            height: 30px;
+            width: 30px;
+        }
+
     </style>
 </head>
 <body>
-<div class="header">
-    <img id="imgMuc" class="div_music" src="~/images/music1.png" onclick="playOrPause()" />
-    <div class="title"><label style="position: absolute;bottom:5px;left: 5px;font-size: 30px;font-weight: bold">123456</label></div>
-</div>
-<div class="center">
-    <div class="div_photo">
-        <img class="jiao1" src="~/photo/jiao.png"/>
-        <img class="jiao2" src="~/photo/jiao.png"/>
-        <img class="jiao3" src="~/photo/jiao.png"/>
-        <img class="jiao4" src="~/photo/jiao.png"/>
-        <img id="photo" style="width: 100%;height: 100%;margin: 0;padding: 0;vertical-align:bottom" src="photo/1.jpg"/>
-        @*<img class="kuang"   style="width: 100%; height: 100%;" src="~/photo/xiang2.png" />*@
+    <div class="header">
+        <img id="imgMuc" class="div_music" src="~/images/music1.png" onclick="playOrPause()" />
+        <div class="title">
+            <label style="position: absolute; bottom: 5px; left: 10px; font-family: YouYuan; font-size: 30px; font-weight: bold"><img class="title_le_img" src="~/photo/title.png" />哈哈哈<img class="title_ri_img" src="~/photo/title.png" /></label>
+        </div>
     </div>
-</div>
-<div class="bottom">
-    <div class="div_bot_font">
-        <label style="position: absolute;top: 15px;left: 10px;font-size: 35px;font-weight: bold">123456</label>
+    <div class="center">
+        <div class="div_photo">
+            <img id="xiang" class="div_xiang" src="photo/xiang1.png"/>
+            <img id="photo" style="width: 100%; height: 100%; margin: 0; padding: 0; vertical-align: bottom;border-radius:25px;" src="photo/1.jpg" />
+        </div>
     </div>
-    <div class="div_bot_ph">
-        <img style="height: 100%; width: 100%; position: absolute;" src="~/photo/dong2.gif"/>
-    </div>
+    <div class="bottom">
+        <div class="div_bot_font">
+            <marquee direction=up behavior=scroll scrollamount=1 scrolldelay=10 align="left" style="position: absolute;top: 15px; left: 15px;height:80%;width:200px;font-size: 15px;font-weight:bold " >
+                <p>我试试</p>
+                <p>第一段</p>
+                <p style="text-indent:1em;"> MARQUEE 元素的默认宽度与其父元素的宽度相等。如果 MARQUEE 位于没有指定宽度的 TD 内，你就需要明确设置 MARQUEE 的宽度。如果 MARQUEE 和 TD 的宽度都没有指定，那么滚动字幕就将限定于 1 个像素宽。</p>
+                <p>第三段</p>
+                <p>第四段</p>
+            </marquee>    
+        </div>
+        <div class="div_bot_ph">
+            <img id="bot_img" style="height: 100%; width: 100%; position: absolute;" src="~/photo/dong3.gif" />
+        </div>
 
-</div>
-<div style="visibility: hidden">
-    <audio id="auMusic" autoplay="autoplay" src="~/audio/mp3/1.mp3">
-        does not support.
-    </audio>
-</div>
-    @*<div class="container" style="background-image: url(photo/background1.jpg)">
-            <div class="header">
-                <span style="height: 100px;width: 100%;background-color: #658ef1"><label style="height: 100%;vertical-align: middle;font-size: large"></label></span>
-                <img id="imgMuc" class="div_music" src="~/images/music1.png" onclick="playOrPause()"/>
-            </div>
-
-            <div class="center">
-                <img id="photo" style="width: 100%;height: 100%;margin: 0;padding: 0;vertical-align:bottom" src="photo/1.jpg"/>
-            </div>
-            <div style="visibility: hidden">
-                <audio id="auMusic" autoplay="autoplay" src="~/audio/mp3/1.mp3">
-                    does not support.
-                </audio>
-            </div>
-            <div class="bottom">
-                <span style="height: 100%"><label>woxiangyaofei</label></span>
-            </div>
-        </div>*@
+    </div>
+    <div style="visibility: hidden">
+        <audio id="auMusic" autoplay="autoplay" src="~/audio/mp3/1.mp3">
+            does not support.
+        </audio>
+    </div>
     <script type="text/javascript">
-
-        //$(function () {
-        //    $(".container").css("height", screen.height);
-        //    $(".container").css("width", screen.width);
-        //});
 
         var aud = document.getElementById("auMusic");
 
@@ -232,16 +197,38 @@
     <script type="text/javascript">
 
         //图片转换
-        var num = 2;
-        var img = new Image();
-        img.src = "photo/" + num + ".jpg";
+        var bot_num = 2;
         setInterval(function () {
-            $("#photo").attr("src", "photo/" + num + ".jpg");
-
-            num++;
-            if (num > 3) {
-                num = 1;
+            $("#bot_img").attr("src", "photo/dong" + bot_num + ".gif");
+            bot_num++;
+            if (bot_num > 3) {
+                bot_num = 1;
             }
+        },
+            16000);
+
+
+        //图片转换
+        var num = 2;
+        var num_xiang = 1;
+        var loop_xiang = 6;
+        setInterval(function () {
+            $(".div_photo").fadeOut(800, function () {
+                $("#photo").attr("src", "photo/" + num + ".jpg");
+                $(".div_xiang").attr("src", "photo/xiang" + num_xiang + ".png");
+                num++;
+                if (parseInt(num / loop_xiang) == 0) {
+                    num_xiang++;
+                }
+
+                if (num > 3) {
+                    num = 1;
+                }
+                if (num_xiang > loop_xiang) {
+                    num_xiang = 1;
+                }
+                $(".div_photo").fadeIn(600);
+            })
         },
             5000);
 
@@ -264,7 +251,7 @@
     @*全屏*@
     <script type="text/javascript">
         var full = 0;
-        $("#photo").click(function () {
+        $(".div_photo").click(function () {
             if (full == 0) {
                 fullscreen();
                 full = 1;

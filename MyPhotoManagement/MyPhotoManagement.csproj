@@ -222,6 +222,7 @@
     <Content Include="photo\3.JPG" />
     <Content Include="photo\2.JPG" />
     <Content Include="photo\13.jpg" />
+    <Content Include="photo\title_img.png" />
     <Content Include="photo\background1.jpg" />
     <Content Include="photo\background2.jpg" />
     <Content Include="photo\big1.jpg" />

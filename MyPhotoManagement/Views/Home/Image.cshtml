@@ -6,23 +6,24 @@
     <title>login validate</title>
     <script src="~/Scripts/jquery-1.8.2.min.js"></script>
     <style type="text/css">
-        body, .container {
+        body{
             margin: 0;
             padding: 0;
             height: 100%;
             overflow: hidden;
             background-size: contain;
+            background-color:#f8d9d9;
         }
 
         .header {
-            background-color: #0094ff;
+            /*background-color: #0094ff;*/
             width: 100%;
             position: absolute;
             height: 10%;
         }
 
         .center {
-            background-color: #0094ff;
+            /*background-color: #0094ff;*/
             width: 100%;
             position: absolute;
             top: 10%;
@@ -32,7 +33,7 @@
         }
 
         .bottom {
-            background-color: #0094ff;
+            /*background-color: #0094ff;*/
             width: 100%;
             position: absolute;
             top: 70%;
@@ -63,61 +64,12 @@
         .div_photo {
             height: 100%;
             width: 80%;
-            background-color: #808080;
+            background-color: #f8d9d9;
             margin: 5px auto;
+            transform: rotate(45deg);
             /*position: absolute;*/
         }
 
-        .jiao1 {
-            position: absolute;
-            top: 5px;
-            left: 10%;
-            z-index: 1;
-            height: 45px;
-            width: 45px;
-        }
-
-        .jiao2 {
-            position: absolute;
-            top: 5px;
-            right: 10%;
-            z-index: 1;
-            height: 45px;
-            width: 45px;
-            transform: rotate(90deg);
-            -ms-transform: rotate(90deg); /* IE 9 */
-            -moz-transform: rotate(90deg); /* Firefox */
-            -webkit-transform: rotate(90deg); /* Safari and Chrome */
-            -o-transform: rotate(90deg); /* Opera style="visibility:hidden"*/
-        }
-
-        .jiao3 {
-            position: absolute;
-            bottom: 0;
-            left: 10%;
-            z-index: 1;
-            height: 45px;
-            width: 45px;
-            transform: rotate(-90deg);
-            -ms-transform: rotate(-90deg); /* IE 9 */
-            -moz-transform: rotate(-90deg); /* Firefox */
-            -webkit-transform: rotate(-90deg); /* Safari and Chrome */
-            -o-transform: rotate(-90deg); /* Opera style="visibility:hidden"*/
-        }
-
-        .jiao4 {
-            position: absolute;
-            bottom: 0;
-            right: 10%;
-            z-index: 1;
-            height: 45px;
-            width: 45px;
-            transform: rotate(-180deg);
-            -ms-transform: rotate(-180deg); /* IE 9 */
-            -moz-transform: rotate(-180deg); /* Firefox */
-            -webkit-transform: rotate(-180deg); /* Safari and Chrome */
-            -o-transform: rotate(-180deg); /* Opera style="visibility:hidden"*/
-        }
 
         .open {
             transform: rotate(30deg);
@@ -131,7 +83,7 @@
             position: absolute;
             bottom: 5px;
             right: 5px;
-            z-index: 1;
+            z-index: 2;
             height: 150px;
             width: 150px;
             /*background-color: #b6ff00;*/
@@ -146,31 +98,46 @@
             width: 80%;
             /*background-color: #e49e6d;*/
         }
+
+        .title_le_img {
+            height: 30px;
+            width: 30px;
+            transform:rotateY(180deg);
+        }
+
+         .title_ri_img {
+            height: 30px;
+            width: 30px;
+        }
+
     </style>
 </head>
 <body>
     <div class="header">
         <img id="imgMuc" class="div_music" src="~/images/music1.png" onclick="playOrPause()" />
         <div class="title">
-            <label style="position: absolute; bottom: 5px; left: 5px; font-family: YouYuan; font-size: 30px; font-weight: bold">123456</label>
+            <label style="position: absolute; bottom: 5px; left: 5px; font-family: YouYuan; font-size: 30px; font-weight: bold"><img class="title_le_img" src="~/photo/title_img.png" />哈哈哈<img class="title_ri_img" src="~/photo/title_img.png" /></label>
         </div>
     </div>
     <div class="center">
         <div class="div_photo">
-            <img class="jiao1" src="~/photo/jiao.png" />
-            <img class="jiao2" src="~/photo/jiao.png" />
-            <img class="jiao3" src="~/photo/jiao.png" />
-            <img class="jiao4" src="~/photo/jiao.png" />
             <img id="photo" style="width: 100%; height: 100%; margin: 0; padding: 0; vertical-align: bottom" src="photo/1.jpg" />
             @*<img class="kuang"   style="width: 100%; height: 100%;" src="~/photo/xiang2.png" />*@
         </div>
     </div>
     <div class="bottom">
         <div class="div_bot_font">
-            <label style="position: absolute; top: 15px; left: 10px; font-size: 35px; font-weight: bold">123456</label>
+            @*<label style="position: absolute; top: 15px; left: 10px; font-size: 35px; font-weight: bold">123456</label>*@
+            <marquee direction=up behavior=scroll scrollamount=1 scrolldelay=10 align="right" style="position: absolute;top: 15px; left: 15px;height:80%;width:210px;font-weight:bold " onmouseover=this.stop() onmouseout=this.start()>
+                <p>我试试</p>
+                <p>第一段</p>
+                <p style="text-indent:1em;"> MARQUEE 元素的默认宽度与其父元素的宽度相等。如果 MARQUEE 位于没有指定宽度的 TD 内，你就需要明确设置 MARQUEE 的宽度。如果 MARQUEE 和 TD 的宽度都没有指定，那么滚动字幕就将限定于 1 个像素宽。</p>
+                <p>第三段</p>
+                <p>第四段</p>
+            </marquee>
         </div>
         <div class="div_bot_ph">
-            <img id="bot_img" style="height: 100%; width: 100%; position: absolute;" src="~/photo/dong3.gif" />
+            @*<img id="bot_img" style="height: 100%; width: 100%; position: absolute;" src="~/photo/dong3.gif" />*@
         </div>
 
     </div>
@@ -213,6 +180,7 @@
         //图片转换
         var bot_num = 2;
         setInterval(function () {
+            
             $("#bot_img").attr("src", "photo/dong" + bot_num + ".gif");
             bot_num++;
             if (bot_num > 3) {
@@ -225,11 +193,16 @@
         //图片转换
         var num = 2;
         setInterval(function () {
-            $("#photo").attr("src", "photo/" + num + ".jpg");
-            num++;
-            if (num > 3) {
-                num = 1;
-            }
+            $(".div_photo").fadeOut(800, function () {
+                $("#photo").attr("src", "photo/" + num + ".jpg");
+                num++;
+                if (num > 3) {
+                    num = 1;
+                }
+
+                $(".div_photo").fadeIn(600);
+            })
+            
         },
             5000);
 

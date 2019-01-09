@@ -45,7 +45,7 @@
       <publishTime>12/27/2018 22:11:32</publishTime>
     </File>
     <File Include="bin/MyPhotoManagement.dll">
-      <publishTime>01/09/2019 00:11:52</publishTime>
+      <publishTime>01/09/2019 21:27:25</publishTime>
     </File>
     <File Include="bin/Newtonsoft.Json.dll">
       <publishTime>12/27/2018 22:11:33</publishTime>
@@ -363,7 +363,7 @@
       <publishTime>01/02/2019 21:05:28</publishTime>
     </File>
     <File Include="photo/4.JPG">
-      <publishTime>12/27/2018 23:00:50</publishTime>
+      <publishTime>01/02/2019 21:05:53</publishTime>
     </File>
     <File Include="photo/5.JPG">
       <publishTime>01/02/2019 21:05:53</publishTime>
@@ -404,14 +404,26 @@
     <File Include="photo/xiang3.jpg">
       <publishTime>01/02/2019 21:46:16</publishTime>
     </File>
+    <File Include="photo/xiang3.png">
+      <publishTime>01/09/2019 21:12:02</publishTime>
+    </File>
     <File Include="photo/xiang4.png">
-      <publishTime>01/04/2019 22:40:01</publishTime>
+      <publishTime>01/09/2019 21:13:51</publishTime>
     </File>
     <File Include="photo/xiang5.png">
       <publishTime>01/04/2019 22:46:00</publishTime>
     </File>
     <File Include="photo/xiang6.png">
       <publishTime>01/07/2019 23:28:37</publishTime>
+    </File>
+    <File Include="photo/xiang_h1.png">
+      <publishTime>01/09/2019 21:13:06</publishTime>
+    </File>
+    <File Include="photo/xiang_h2.png">
+      <publishTime>01/09/2019 21:13:19</publishTime>
+    </File>
+    <File Include="photo/xiang_h3.png">
+      <publishTime>01/09/2019 21:14:14</publishTime>
     </File>
     <File Include="Scripts/jquery-1.8.2.js">
       <publishTime>12/27/2018 22:18:32</publishTime>
@@ -459,7 +471,7 @@
       <publishTime>12/27/2018 22:11:32</publishTime>
     </File>
     <File Include="Views/Home/Image.cshtml">
-      <publishTime>01/09/2019 00:11:32</publishTime>
+      <publishTime>01/09/2019 23:41:13</publishTime>
     </File>
     <File Include="Views/Home/Index.cshtml">
       <publishTime>01/02/2019 21:05:52</publishTime>

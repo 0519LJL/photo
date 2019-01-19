@@ -1,0 +1,10 @@
+D:\MyProject\photo\IW.Entity\bin\Debug\IW.Entity.dll.config
+D:\MyProject\photo\IW.Entity\bin\Debug\IW.Entity.dll
+D:\MyProject\photo\IW.Entity\bin\Debug\IW.Entity.pdb
+D:\MyProject\photo\IW.Entity\bin\Debug\EntityFramework.dll
+D:\MyProject\photo\IW.Entity\bin\Debug\EntityFramework.SqlServer.dll
+D:\MyProject\photo\IW.Entity\bin\Debug\EntityFramework.xml
+D:\MyProject\photo\IW.Entity\bin\Debug\EntityFramework.SqlServer.xml
+D:\MyProject\photo\IW.Entity\bin\Debug\zh-Hans\EntityFramework.resources.dll
+D:\MyProject\photo\IW.Entity\obj\Debug\IW.Entity.dll
+D:\MyProject\photo\IW.Entity\obj\Debug\IW.Entity.pdb

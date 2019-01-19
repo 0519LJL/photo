@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="usersystemModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2012" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="usersystemModelStoreContainer">
+    <EntitySet Name="user" EntityType="usersystemModel.Store.user" store:Type="Tables" Schema="dbo" />
+  </EntityContainer>
+  <EntityType Name="user">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="userId" Type="uniqueidentifier" Nullable="false" DefaultValue="00000000-aaaa-bbbb-cccc-ddddeeeeffff" />
+    <Property Name="userName" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Sex" Type="smallint" Nullable="false" />
+    <Property Name="Age" Type="smallint" Nullable="false" />
+  </EntityType>
+</Schema>

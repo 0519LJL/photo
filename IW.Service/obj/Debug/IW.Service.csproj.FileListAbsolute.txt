@@ -1,0 +1,12 @@
+D:\MyProject\photo\IW.Service\bin\Debug\IW.Service.dll
+D:\MyProject\photo\IW.Service\bin\Debug\IW.Service.pdb
+D:\MyProject\photo\IW.Service\obj\Debug\IW.Service.csprojResolveAssemblyReference.cache
+D:\MyProject\photo\IW.Service\obj\Debug\IW.Service.dll
+D:\MyProject\photo\IW.Service\obj\Debug\IW.Service.pdb
+D:\MyProject\photo\IW.Service\bin\Debug\IW.Entity.dll
+D:\MyProject\photo\IW.Service\bin\Debug\IW.Isevice.dll
+D:\MyProject\photo\IW.Service\bin\Debug\EntityFramework.dll
+D:\MyProject\photo\IW.Service\bin\Debug\IW.Entity.pdb
+D:\MyProject\photo\IW.Service\bin\Debug\IW.Isevice.pdb
+D:\MyProject\photo\IW.Service\bin\Debug\EntityFramework.xml
+D:\MyProject\photo\IW.Service\bin\Debug\zh-Hans\EntityFramework.resources.dll

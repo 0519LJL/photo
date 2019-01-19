@@ -1,0 +1,12 @@
+D:\MyProject\photo\IW.UnitTest\bin\Debug\IW.UnitTest.dll
+D:\MyProject\photo\IW.UnitTest\bin\Debug\IW.UnitTest.pdb
+D:\MyProject\photo\IW.UnitTest\obj\Debug\IW.UnitTest.csprojResolveAssemblyReference.cache
+D:\MyProject\photo\IW.UnitTest\obj\Debug\IW.UnitTest.dll
+D:\MyProject\photo\IW.UnitTest\obj\Debug\IW.UnitTest.pdb
+D:\MyProject\photo\IW.UnitTest\bin\Debug\IW.Entity.dll
+D:\MyProject\photo\IW.UnitTest\bin\Debug\IW.Service.dll
+D:\MyProject\photo\IW.UnitTest\bin\Debug\EntityFramework.dll
+D:\MyProject\photo\IW.UnitTest\bin\Debug\IW.Entity.pdb
+D:\MyProject\photo\IW.UnitTest\bin\Debug\IW.Service.pdb
+D:\MyProject\photo\IW.UnitTest\bin\Debug\EntityFramework.xml
+D:\MyProject\photo\IW.UnitTest\bin\Debug\zh-Hans\EntityFramework.resources.dll

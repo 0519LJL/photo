@@ -1,0 +1,4 @@
+D:\MyProject\photo\IW.Isevice\bin\Debug\IW.Isevice.dll
+D:\MyProject\photo\IW.Isevice\bin\Debug\IW.Isevice.pdb
+D:\MyProject\photo\IW.Isevice\obj\Debug\IW.Isevice.dll
+D:\MyProject\photo\IW.Isevice\obj\Debug\IW.Isevice.pdb

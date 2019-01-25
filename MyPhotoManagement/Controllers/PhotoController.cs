@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using IW.Dao;
 
 namespace MyPhotoManagement.Controllers
 {
@@ -18,10 +19,11 @@ namespace MyPhotoManagement.Controllers
         }
 
         [HttpPost]
-        public JsonResult UpLoad(List<string> strbase)
+        public JsonResult UpLoad(string strbase)
         {
-            string base64str = strbase[0].Replace("data:image/jpeg;base64,", "");
-            string[] base64strs = base64str.Split(',');
+           
+            //string base64str = strbase[0].Replace("data:image/jpeg;base64,", "");
+            //string[] base64strs = base64str.Split(',');
             try
             {
                 //for (int i = 0; i < base64strs.Length; i++)

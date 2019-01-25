@@ -126,9 +126,9 @@
                 }
                 );
                 $.ajax({
-                    url: 'UpLoad',
+                    url: 'Photo/UpLoad',
                     type: 'post',
-                    data: { strbase: JSON.stringify(submitArr) },
+                    data: { strbase: '1231' },
                     dataType: 'json',
                     success: function (data) {
                         console.log('返回的数据：' + JSON.stringify(data))

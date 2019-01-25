@@ -1,0 +1,4 @@
+D:\MyProject\photo\IW.Model\bin\Debug\IW.Model.dll
+D:\MyProject\photo\IW.Model\bin\Debug\IW.Model.pdb
+D:\MyProject\photo\IW.Model\obj\Debug\IW.Model.dll
+D:\MyProject\photo\IW.Model\obj\Debug\IW.Model.pdb

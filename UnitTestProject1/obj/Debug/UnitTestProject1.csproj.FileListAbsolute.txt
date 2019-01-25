@@ -1,0 +1,11 @@
+D:\MyProject\photo\UnitTestProject1\bin\Debug\UnitTestProject1.dll
+D:\MyProject\photo\UnitTestProject1\bin\Debug\UnitTestProject1.pdb
+D:\MyProject\photo\UnitTestProject1\bin\Debug\PetaPoco.dll
+D:\MyProject\photo\UnitTestProject1\obj\Debug\UnitTestProject1.csprojResolveAssemblyReference.cache
+D:\MyProject\photo\UnitTestProject1\obj\Debug\UnitTestProject1.dll
+D:\MyProject\photo\UnitTestProject1\obj\Debug\UnitTestProject1.pdb
+D:\MyProject\photo\UnitTestProject1\bin\Debug\IW.Dao.dll
+D:\MyProject\photo\UnitTestProject1\bin\Debug\IW.Dao.pdb
+D:\MyProject\photo\UnitTestProject1\bin\Debug\IW.Model.dll
+D:\MyProject\photo\UnitTestProject1\bin\Debug\IW.Model.pdb
+D:\MyProject\photo\UnitTestProject1\bin\Debug\UnitTestProject1.dll.config

@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{24B7CA00-2E61-4569-8966-5A504F22C9D2}</ProjectGuid>
+    <ProjectGuid>{77319E83-1C74-4AD7-9391-9BA38747C76D}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>IW.Dao</RootNamespace>
@@ -44,14 +44,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="UserService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserService.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.Config" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\IW.CommonUtil\IW.CommonUtil.csproj">
+      <Project>{0fbceb87-6245-430e-9971-1ff0e3d3d8a2}</Project>
+      <Name>IW.CommonUtil</Name>
+    </ProjectReference>
     <ProjectReference Include="..\IW.Model\IW.Model.csproj">
       <Project>{1628da5c-cb53-40f4-9232-74fe5aad58cb}</Project>
       <Name>IW.Model</Name>

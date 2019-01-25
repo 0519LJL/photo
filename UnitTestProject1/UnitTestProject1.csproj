@@ -57,8 +57,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Dao\IW.Dao.csproj">
-      <Project>{24b7ca00-2e61-4569-8966-5a504f22c9d2}</Project>
+    <ProjectReference Include="..\IW.Dao\IW.Dao.csproj">
+      <Project>{77319e83-1c74-4ad7-9391-9ba38747c76d}</Project>
       <Name>IW.Dao</Name>
     </ProjectReference>
     <ProjectReference Include="..\IW.Model\IW.Model.csproj">

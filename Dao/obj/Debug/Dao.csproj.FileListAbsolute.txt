@@ -1,6 +1,0 @@
-D:\MyProject\photo\Dao\bin\Debug\Dao.dll
-D:\MyProject\photo\Dao\bin\Debug\Dao.pdb
-D:\MyProject\photo\Dao\obj\Debug\Dao.dll
-D:\MyProject\photo\Dao\obj\Debug\Dao.pdb
-D:\MyProject\photo\Dao\bin\Debug\Dao.dll.config
-D:\MyProject\photo\Dao\bin\Debug\PetaPoco.dll

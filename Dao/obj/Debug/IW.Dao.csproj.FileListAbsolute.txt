@@ -1,9 +1,0 @@
-D:\MyProject\photo\Dao\bin\Debug\IW.Dao.dll.config
-D:\MyProject\photo\Dao\bin\Debug\IW.Dao.dll
-D:\MyProject\photo\Dao\bin\Debug\IW.Dao.pdb
-D:\MyProject\photo\Dao\bin\Debug\PetaPoco.dll
-D:\MyProject\photo\Dao\obj\Debug\IW.Dao.dll
-D:\MyProject\photo\Dao\obj\Debug\IW.Dao.pdb
-D:\MyProject\photo\Dao\obj\Debug\IW.Dao.csprojResolveAssemblyReference.cache
-D:\MyProject\photo\Dao\bin\Debug\IW.Model.dll
-D:\MyProject\photo\Dao\bin\Debug\IW.Model.pdb

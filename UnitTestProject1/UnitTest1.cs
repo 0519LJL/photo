@@ -15,7 +15,7 @@ namespace UnitTestProject1
 
             UserInfo  user = new UserInfo();
             user.id = Guid.NewGuid();
-            user.name = "测试用户";
+            user.name = "测试用户2";
             user.Phone = "1300045";
             user.sex = 1;
             user.age = 12;

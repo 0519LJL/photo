@@ -1,0 +1,7 @@
+D:\MyProject\photo\IW.IDao\bin\Debug\IW.IDao.dll
+D:\MyProject\photo\IW.IDao\bin\Debug\IW.IDao.pdb
+D:\MyProject\photo\IW.IDao\bin\Debug\IW.Model.dll
+D:\MyProject\photo\IW.IDao\bin\Debug\IW.Model.pdb
+D:\MyProject\photo\IW.IDao\obj\Debug\IW.IDao.csprojResolveAssemblyReference.cache
+D:\MyProject\photo\IW.IDao\obj\Debug\IW.IDao.dll
+D:\MyProject\photo\IW.IDao\obj\Debug\IW.IDao.pdb

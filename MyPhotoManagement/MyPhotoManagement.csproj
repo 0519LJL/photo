@@ -219,6 +219,7 @@
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="用户表脚本.sql" />
     <None Include="Properties\PublishProfiles\photo.pubxml" />
     <None Include="Scripts\jquery-1.8.2.intellisense.js" />
     <Content Include="photo\5.JPG" />
@@ -280,6 +281,10 @@
     <ProjectReference Include="..\IW.Dao\IW.Dao.csproj">
       <Project>{77319e83-1c74-4ad7-9391-9ba38747c76d}</Project>
       <Name>IW.Dao</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\IW.IDao\IW.IDao.csproj">
+      <Project>{a680c0f4-97e2-42f2-988f-040a698e24f7}</Project>
+      <Name>IW.IDao</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

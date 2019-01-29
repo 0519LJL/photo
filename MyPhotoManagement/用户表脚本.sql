@@ -76,3 +76,38 @@ EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'最后更新时间' 
 GO
 
 
+CREATE TABLE [dbo].[viewPageInfo](
+	[pageId] [NVARCHAR](36) NOT NULL,
+	[pageName] [NVARCHAR](200) NULL,
+	[viewNum] [INT] NOT NULL CONSTRAINT [DF_viewPageInfo_num]  DEFAULT ((0)),
+	[isEnable] [BIT] NOT NULL CONSTRAINT [DF_viewPageInfo_isEnable]  DEFAULT ((0)),
+	[createTime] [DATETIME] NOT NULL CONSTRAINT [DF_viewPageInfo_createTime]  DEFAULT (GETDATE()),
+	[lastUpdateDate] [DATETIME] NULL,
+ CONSTRAINT [PK_viewPageInfo] PRIMARY KEY CLUSTERED 
+(
+	[pageId] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'网页id' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'viewPageInfo', @level2type=N'COLUMN',@level2name=N'pageId'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'网页名称' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'viewPageInfo', @level2type=N'COLUMN',@level2name=N'pageName'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'数量' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'viewPageInfo', @level2type=N'COLUMN',@level2name=N'viewNum'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'是否启用' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'viewPageInfo', @level2type=N'COLUMN',@level2name=N'isEnable'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'创建时间' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'viewPageInfo', @level2type=N'COLUMN',@level2name=N'createTime'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'最后更新时间' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'viewPageInfo', @level2type=N'COLUMN',@level2name=N'lastUpdateDate'
+GO
+
+
+

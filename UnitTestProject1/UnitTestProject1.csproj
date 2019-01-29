@@ -61,6 +61,10 @@
       <Project>{77319e83-1c74-4ad7-9391-9ba38747c76d}</Project>
       <Name>IW.Dao</Name>
     </ProjectReference>
+    <ProjectReference Include="..\IW.IDao\IW.IDao.csproj">
+      <Project>{a680c0f4-97e2-42f2-988f-040a698e24f7}</Project>
+      <Name>IW.IDao</Name>
+    </ProjectReference>
     <ProjectReference Include="..\IW.Model\IW.Model.csproj">
       <Project>{1628da5c-cb53-40f4-9232-74fe5aad58cb}</Project>
       <Name>IW.Model</Name>

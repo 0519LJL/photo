@@ -2,6 +2,7 @@
 using IW.Dao;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using IW.Model;
+using IW.IDao;
 
 namespace UnitTestProject1
 {
@@ -11,7 +12,7 @@ namespace UnitTestProject1
         [TestMethod]
         public void TestMethod1()
         {
-            UserService cla = new UserService();
+            IUserService cla = new UserService();
 
             UserInfo  user = new UserInfo();
             user.id = Guid.NewGuid();
@@ -21,6 +22,17 @@ namespace UnitTestProject1
             user.age = 12;
 
             cla.addUser(user);
+        }
+
+        [TestMethod]
+        public void TestViewPageMethod1()
+        {
+            IViewPageService cla = new ViewPageService();
+
+            ViewPageInfo viewPage = new ViewPageInfo();
+            viewPage.pageId = Guid.NewGuid();
+            viewPage.pageName = "查看网页";
+            cla.addPageInfos(viewPage);
         }
     }
 }

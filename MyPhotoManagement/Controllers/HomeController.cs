@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using IW.Dao;
+using IW.IDao;
 
 namespace MyPhotoManagement.Controllers
 {
@@ -18,6 +20,8 @@ namespace MyPhotoManagement.Controllers
 
         public ActionResult Image()
         {
+            IImageService imageService = new ImageService();
+            imageService.addViewNum();
             return View();
         }
 

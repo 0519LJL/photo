@@ -9,3 +9,5 @@ D:\MyProject\photo\UnitTestProject1\bin\Debug\IW.Dao.pdb
 D:\MyProject\photo\UnitTestProject1\bin\Debug\IW.Model.dll
 D:\MyProject\photo\UnitTestProject1\bin\Debug\IW.Model.pdb
 D:\MyProject\photo\UnitTestProject1\bin\Debug\UnitTestProject1.dll.config
+D:\MyProject\photo\UnitTestProject1\bin\Debug\IW.IDao.dll
+D:\MyProject\photo\UnitTestProject1\bin\Debug\IW.IDao.pdb

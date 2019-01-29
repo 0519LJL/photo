@@ -12,5 +12,11 @@ namespace IW.Model
         public string Phone { get; set; }
         public int sex { get; set; }
         public int age { get; set; }
+
+        public bool isEnable { get; set; }
+
+        public DateTime createTime { get; set; }
+
+        public DateTime lastUpdateDate { get; set; }
     }
 }

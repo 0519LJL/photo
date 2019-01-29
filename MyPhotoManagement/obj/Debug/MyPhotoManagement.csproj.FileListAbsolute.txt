@@ -150,3 +150,5 @@ D:\MyProject\photo\MyPhotoManagement\bin\IW.Dao.dll
 D:\MyProject\photo\MyPhotoManagement\bin\IW.Dao.pdb
 D:\MyProject\photo\MyPhotoManagement\bin\IW.Model.dll
 D:\MyProject\photo\MyPhotoManagement\bin\IW.Model.pdb
+D:\MyProject\photo\MyPhotoManagement\bin\IW.IDao.dll
+D:\MyProject\photo\MyPhotoManagement\bin\IW.IDao.pdb

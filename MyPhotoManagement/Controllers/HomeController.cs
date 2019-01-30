@@ -20,9 +20,15 @@ namespace MyPhotoManagement.Controllers
 
         public ActionResult Image()
         {
-            IImageService imageService = new ImageService();
-            imageService.addViewNum();
             return View();
+        }
+
+        [HttpPost]
+        public ActionResult getImageList()
+        {
+            IImageService imageService = new ImageService();
+            List<string> pahtList = imageService.getPhotoList();
+            return new JsonResult() { Data = pahtList };
         }
 
     }

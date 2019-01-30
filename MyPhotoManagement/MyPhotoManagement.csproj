@@ -158,6 +158,10 @@
     <Content Include="images\scroll-auto-bg.png" />
     <Content Include="images\scrollBgline.gif" />
     <Content Include="images\sel-bg.gif" />
+    <Content Include="photo\wo\0D8B0601-CE1B-42BC-8BDE-4DD91817BB0E.jpg" />
+    <Content Include="photo\wo\32920816-FE00-4FF7-8623-C12B822130DB.jpg" />
+    <Content Include="photo\wo\A85E4E34-527F-495F-B7B5-26F7782C790D.jpg" />
+    <Content Include="photo\wo\E563B2D6-F0E4-49A0-A103-055F4A7D469C.jpg" />
     <Content Include="photo\xiang3.png" />
     <Content Include="photo\title.png" />
     <Content Include="photo\xiang2.png" />

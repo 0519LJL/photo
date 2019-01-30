@@ -34,5 +34,12 @@ namespace UnitTestProject1
             viewPage.pageName = "查看网页";
             cla.addPageInfos(viewPage);
         }
+
+        [TestMethod]
+        public void TestConfigMethod1()
+        {
+            IImageService imageService = new ImageService();
+            imageService.getPhotoList();
+        }
     }
 }

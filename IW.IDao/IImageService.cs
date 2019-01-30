@@ -8,5 +8,7 @@ namespace IW.IDao
     public abstract class IImageService
     {
         public abstract void addViewNum();
+
+        public abstract List<string> getPhotoList();
     }
 }

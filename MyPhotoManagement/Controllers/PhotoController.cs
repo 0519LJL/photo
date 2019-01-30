@@ -19,40 +19,50 @@ namespace MyPhotoManagement.Controllers
         }
 
         [HttpPost]
-        public JsonResult UpLoad(string strbase)
+        public JsonResult UpLoad(HttpPostedFileBase file)
         {
-           
-            //string base64str = strbase[0].Replace("data:image/jpeg;base64,", "");
-            //string[] base64strs = base64str.Split(',');
-            try
-            {
-                //for (int i = 0; i < base64strs.Length; i++)
-                //{
-                //    byte[] bt = Convert.FromBase64String(base64strs[i]);//获取图片base64
-                //    string fileName = DateTime.Now.Year.ToString() + DateTime.Now.Month.ToString();//年月
-                //    string ImageFilePath = "/Image" + "/" + fileName;
-                //    if (System.IO.Directory.Exists(HttpContext.Current.Server.MapPath(ImageFilePath)) == false)//如果不存在就创建文件夹
-                //    {
-                //        System.IO.Directory.CreateDirectory(HttpContext.Server.MapPath(ImageFilePath));
-                //    }
-                //    string ImagePath = HttpContext.Current.Server.MapPath(ImageFilePath) + "/" + System.DateTime.Now.ToString("yyyyHHddHHmmss");//定义图片名称
-                //    File.WriteAllBytes(ImagePath + ".png", bt); //保存图片到服务器，然后获取路径  
-                //}
-                
-            }
-            catch (Exception e)
-            {
-                throw e;
-            }
+            var res = CheckImg(file);
+            
             
             return new JsonResult() { Data = "上传成功" };
         }
 
-        public class photo
+        private string CheckImg(HttpPostedFileBase file)
         {
-            public string name;
-            public string base64;
+            if (file == null) return "图片不能空！";
+            if (file.ContentLength / 1024 > 8000)
+            {
+                return "图片太大";
+            }
+            if (file.ContentLength / 1024 < 10)
+            {
+                return "图片太小！";
+            }
+            var image = GetExtensionName(file.FileName).ToLower();
+            if (image != ".bmp" && image != ".png" && image != ".gif" && image != ".jpg" && image != ".jpeg")// 这里你自己加入其他图片格式，最好全部转化为大写再判断，我就偷懒了
+            {
+                return "格式不对";
+            }
+
+            var scrtemp = Path.Combine("../../Content/TempFile/", file.FileName);//图片展示的地址
+            var list = Session["Imgscr"] as List<string>;
+            if (list != null && list.Find(n => n == scrtemp) != null)
+            {
+                return "同样的照片已经存在！";
+            }
+
+            return "ok";
         }
+
+        public string GetExtensionName(string fileName)
+        {
+            if (fileName.LastIndexOf("\\", StringComparison.Ordinal) > -1)//在不同浏览器下，filename有时候指的是文件名，有时候指的是全路径，所有这里要要统一。
+            {
+                fileName = fileName.Substring(fileName.LastIndexOf("\\", StringComparison.Ordinal) + 1);//IndexOf 有时候会受到特殊字符的影响而判断错误。加上这个就纠正了。
+            }
+            return Path.GetExtension(fileName.ToLower());
+        }
+
 
     }
 }

@@ -182,7 +182,7 @@
     <div class="center">
         <div id="div_photo" class="div_photo_h">
             <img id="xiang" class="xiang_h" src="photo/xiang_h1.png" />
-            <img id="photo" class="photo_h" src="photo/1.jpg" />
+            <img id="photo" class="photo_h" />
         </div>
     </div>
     <div class="bottom">
@@ -205,60 +205,77 @@
             does not support.
         </audio>
     </div>
-    <script type="text/javascript">
+<script type="text/javascript">
+    
 
-        var aud = document.getElementById("auMusic");
+    var aud = document.getElementById("auMusic");
 
-        function playOrPause() {
-            if (aud.paused) {
-                aud.play();
-            } else {
-                aud.pause();
-            }
+    function playOrPause() {
+        if (aud.paused) {
+            aud.play();
+        } else {
+            aud.pause();
         }
+    }
 
-        var root = 2;
-        aud.loop = false;
-        aud.addEventListener('ended',
-            function () {
+    var root = 2;
+    aud.loop = false;
+    aud.addEventListener('ended',
+        function () {
 
-                $("#auMusic").attr("src", "audio/mp3/" + root + ".mp3");
-                root += 1;
-                if (root > 7) {
-                    root = 1;
-                }
-            },
-            false);
+            $("#auMusic").attr("src", "audio/mp3/" + root + ".mp3");
+            root += 1;
+            if (root > 7) {
+                root = 1;
+            }
+        },
+        false);
 
 
-    </script>
+</script>
 
     @*定时器*@
-    <script type="text/javascript">
+<script type="text/javascript">
 
-        //图片转换
-        var bot_num = 2;
-        setInterval(function () {
+
+    //图片转换
+    var bot_num = 2;
+    setInterval(function () {
             $("#bot_img").attr("src", "photo/dong" + bot_num + ".gif");
             bot_num++;
             if (bot_num > 3) {
                 bot_num = 1;
             }
         },
-            16000);
+        16000);
+
+    var dataList = [];
+    $(function () {
+
+        $.ajax({
+            url: 'Home/getImageList',
+            type: 'Post',
+            //data: { strbase: '1231' },
+            dataType: 'json',
+            success: function (data) {
+                dataList = data;
+                $("#photo").attr("src", "photo/wo/" + dataList[0]);
+            }
+        })
+    })
 
 
-        //图片转换
-        var num = 2;
-        var num_xiang = 1;
-        var num_xiang_h = 1;
-        var loop_photo = 6;
-        setInterval(function () {
+    //图片转换
+    var num = 1;
+    var num_xiang = 1;
+    var num_xiang_h = 1;
+    var loop_photo = 6;
+    setInterval(function () {
             var image = new Image();
-            image.src = "photo/" + num + ".jpg";
+            image.src = "photo/wo/" + dataList[num];
 
             $("#div_photo").fadeOut(800, function () {
-                $("#photo").attr("src", "photo/" + num + ".jpg");
+                $("#photo").attr("src", "photo/wo/" + dataList[num]);
                 num++;
 
                 if (image.width > image.height) {
@@ -281,8 +298,8 @@
                 }
                
                 
-                if (num > 5) {
-                    num = 1;
+                if (num >= dataList.length) {
+                    num = 0;
                 }
                 if (num_xiang > 4) {
                     num_xiang = 1;
@@ -293,11 +310,11 @@
                 $("#div_photo").fadeIn(600);
             })
         },
-            5000);
+        5000);
 
-        //图标旋转
-        var cor = 5;
-        setInterval(function () {
+    //图标旋转
+    var cor = 5;
+    setInterval(function () {
             $("#imgMuc").css("transform", "rotate(" + cor + "deg)");
             $("#imgMuc").css("-ms-transform", "rotate(" + cor + "deg)");
             $("#imgMuc").css("-moz-transform", "rotate(" + cor + "deg)");
@@ -308,8 +325,8 @@
                 cor = 5;
             }
         },
-            80);
-    </script>
+        80);
+</script>
 
     @*全屏*@
     <script type="text/javascript">

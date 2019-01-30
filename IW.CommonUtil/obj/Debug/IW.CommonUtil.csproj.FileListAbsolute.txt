@@ -1,7 +1,7 @@
 D:\MyProject\photo\IW.CommonUtil\bin\Debug\IW.CommonUtil.dll
 D:\MyProject\photo\IW.CommonUtil\bin\Debug\IW.CommonUtil.pdb
-D:\MyProject\photo\IW.CommonUtil\obj\Debug\IW.CommonUtil.dll
-D:\MyProject\photo\IW.CommonUtil\obj\Debug\IW.CommonUtil.pdb
 D:\MyProject\photo\IW.CommonUtil\bin\Debug\AutoMapper.dll
 D:\MyProject\photo\IW.CommonUtil\bin\Debug\Newtonsoft.Json.dll
+D:\MyProject\photo\IW.CommonUtil\obj\Debug\IW.CommonUtil.dll
+D:\MyProject\photo\IW.CommonUtil\obj\Debug\IW.CommonUtil.pdb
 D:\MyProject\photo\IW.CommonUtil\obj\Debug\IW.CommonUtil.csprojResolveAssemblyReference.cache

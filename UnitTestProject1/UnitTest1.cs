@@ -1,8 +1,11 @@
 ﻿using System;
+using System.Collections.Generic;
 using IW.Dao;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using IW.Model;
 using IW.IDao;
+using System.IO;
+using System.Web;
 
 namespace UnitTestProject1
 {
@@ -39,7 +42,7 @@ namespace UnitTestProject1
         public void TestConfigMethod1()
         {
             IImageService imageService = new ImageService();
-            imageService.getPhotoList();
+            imageService.UploadImage(null);
         }
     }
 }

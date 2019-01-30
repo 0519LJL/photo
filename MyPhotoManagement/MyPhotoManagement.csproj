@@ -166,7 +166,6 @@
     <Content Include="photo\title.png" />
     <Content Include="photo\xiang2.png" />
     <Content Include="photo\xiang1.png" />
-    <Content Include="photo\1.jpg" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
@@ -226,13 +225,6 @@
     <Content Include="用户表脚本.sql" />
     <None Include="Properties\PublishProfiles\photo.pubxml" />
     <None Include="Scripts\jquery-1.8.2.intellisense.js" />
-    <Content Include="photo\5.JPG" />
-    <Content Include="photo\3.JPG" />
-    <Content Include="photo\2.JPG" />
-    <Content Include="photo\background1.jpg" />
-    <Content Include="photo\background2.jpg" />
-    <Content Include="photo\big1.jpg" />
-    <Content Include="photo\4.jpg" />
     <Content Include="photo\dong1.gif" />
     <Content Include="photo\dong2.gif" />
     <Content Include="photo\dong3.gif" />

@@ -96,11 +96,14 @@ D:\mygitproject\photo\MyPhotoManagement\obj\Debug\MyPhotoManagement.dll
 D:\mygitproject\photo\MyPhotoManagement\obj\Debug\MyPhotoManagement.pdb
 D:\mygitproject\photo\MyPhotoManagement\bin\MyPhotoManagement.dll.config
 D:\mygitproject\photo\MyPhotoManagement\obj\Debug\MyPhotoManagement.csprojResolveAssemblyReference.cache
+D:\MyProject\photo\MyPhotoManagement\obj\Debug\MyPhotoManagement.csprojResolveAssemblyReference.cache
 D:\MyProject\photo\MyPhotoManagement\bin\MyPhotoManagement.dll.config
 D:\MyProject\photo\MyPhotoManagement\bin\MyPhotoManagement.dll
 D:\MyProject\photo\MyPhotoManagement\bin\MyPhotoManagement.pdb
 D:\MyProject\photo\MyPhotoManagement\bin\Antlr3.Runtime.dll
 D:\MyProject\photo\MyPhotoManagement\bin\EntityFramework.dll
+D:\MyProject\photo\MyPhotoManagement\bin\IW.Dao.dll
+D:\MyProject\photo\MyPhotoManagement\bin\IW.IDao.dll
 D:\MyProject\photo\MyPhotoManagement\bin\Microsoft.Web.Infrastructure.dll
 D:\MyProject\photo\MyPhotoManagement\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
 D:\MyProject\photo\MyPhotoManagement\bin\Newtonsoft.Json.dll
@@ -117,6 +120,10 @@ D:\MyProject\photo\MyPhotoManagement\bin\System.Web.WebPages.Deployment.dll
 D:\MyProject\photo\MyPhotoManagement\bin\System.Web.WebPages.dll
 D:\MyProject\photo\MyPhotoManagement\bin\System.Web.WebPages.Razor.dll
 D:\MyProject\photo\MyPhotoManagement\bin\WebGrease.dll
+D:\MyProject\photo\MyPhotoManagement\bin\IW.Model.dll
+D:\MyProject\photo\MyPhotoManagement\bin\PetaPoco.dll
+D:\MyProject\photo\MyPhotoManagement\bin\IW.Dao.pdb
+D:\MyProject\photo\MyPhotoManagement\bin\IW.IDao.pdb
 D:\MyProject\photo\MyPhotoManagement\bin\EntityFramework.xml
 D:\MyProject\photo\MyPhotoManagement\bin\Newtonsoft.Json.xml
 D:\MyProject\photo\MyPhotoManagement\bin\System.Net.Http.xml
@@ -129,6 +136,7 @@ D:\MyProject\photo\MyPhotoManagement\bin\System.Web.Razor.xml
 D:\MyProject\photo\MyPhotoManagement\bin\System.Web.WebPages.xml
 D:\MyProject\photo\MyPhotoManagement\bin\System.Web.WebPages.Deployment.xml
 D:\MyProject\photo\MyPhotoManagement\bin\System.Web.WebPages.Razor.xml
+D:\MyProject\photo\MyPhotoManagement\bin\IW.Model.pdb
 D:\MyProject\photo\MyPhotoManagement\bin\zh-Hans\EntityFramework.resources.dll
 D:\MyProject\photo\MyPhotoManagement\bin\zh-Hans\System.Net.Http.resources.dll
 D:\MyProject\photo\MyPhotoManagement\bin\zh-Hans\System.Net.Http.Formatting.resources.dll
@@ -144,11 +152,3 @@ D:\MyProject\photo\MyPhotoManagement\bin\zh-Hans\System.Web.WebPages.Deployment.
 D:\MyProject\photo\MyPhotoManagement\bin\zh-Hans\System.Web.WebPages.Razor.resources.dll
 D:\MyProject\photo\MyPhotoManagement\obj\Debug\MyPhotoManagement.dll
 D:\MyProject\photo\MyPhotoManagement\obj\Debug\MyPhotoManagement.pdb
-D:\MyProject\photo\MyPhotoManagement\bin\PetaPoco.dll
-D:\MyProject\photo\MyPhotoManagement\obj\Debug\MyPhotoManagement.csprojResolveAssemblyReference.cache
-D:\MyProject\photo\MyPhotoManagement\bin\IW.Dao.dll
-D:\MyProject\photo\MyPhotoManagement\bin\IW.Dao.pdb
-D:\MyProject\photo\MyPhotoManagement\bin\IW.Model.dll
-D:\MyProject\photo\MyPhotoManagement\bin\IW.Model.pdb
-D:\MyProject\photo\MyPhotoManagement\bin\IW.IDao.dll
-D:\MyProject\photo\MyPhotoManagement\bin\IW.IDao.pdb

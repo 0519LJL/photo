@@ -56,11 +56,8 @@
     </style>
 
 
-    @*<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>*@
     <script src="~/Scripts/jquery-1.8.2.min.js"></script>
     <script type="text/javascript">
-
-
         window.onload = function () {
             var input = document.getElementById("file_input");
             var result;
@@ -97,7 +94,7 @@
                             base64: this.result   //reader.readAsDataURL方法执行完后，base64数据储存在reader.result里
                         }
                         dataArr.push(imgMsg);
-                        result = '<div class="delete">delete</div><div class="result"><img class="subPic" src="' + this.result + '" alt="' + this.fileName + '"/></div>';
+                        result = '<div class="delete">删除</div><div class="result"><img class="subPic" src="' + this.result + '" alt="' + this.fileName + '"/></div>';
                         var div = document.createElement('div');
                         div.innerHTML = result;
                         div['className'] = 'float';
@@ -122,14 +119,19 @@
             function send() {
                 var submitArr = [];
                 $('.subPic').each(function () {
-                    submitArr.push($(this).attr('src'));
-                }
+                        submitArr.push({
+                            name: $(this).attr('alt'),
+                            base64: $(this).attr('src')
+                        });
+                    }
                 );
                 $.ajax({
-                    url: 'Photo/ProcessRequest',
+                    url: 'Photo/Upload',
                     type: 'post',
-                    data: submitArr,
+                    data: fd,
                     dataType: 'json',
+                    processData: false,   //用FormData传fd时需有这两项    
+                    contentType: false, 
                     success: function (data) {
                         console.log('返回的数据：' + JSON.stringify(data))
                     }
@@ -160,12 +162,6 @@
                 send();
             }
         }
-        /*
-         用ajax发送fd参数时要告诉jQuery不要去处理发送的数据，
-         不要去设置Content-Type请求头才可以发送成功，否则会报“Illegal invocation”的错误，
-         也就是非法调用，所以要加上“processData: false,contentType: false,”
-         * */
-
 
         function ReSizePic(ThisPic) {
             var RePicWidth = 200; //这里修改为您想显示的宽度值
@@ -190,14 +186,16 @@
 
 
     </script>
+
+
 </head>
 <body>
-    <div class="container">
-        <label>请选择一个图像文件：</label>
-        <button id="select">(重新)选择图片</button>
-        <button id="add">(追加)图片</button>
-        <input type="file" id="file_input" multiple /> <!--用input标签并选择type=file，记得带上multiple，不然就只能单选图片了-->
-        <button id="submit">提交</button>
-    </div>
+<div class="container">
+    <label>请选择图像文件：</label>
+    <button id="select">(重新)选择图片</button>
+    <button id="add">(追加)图片</button>
+    <input type="file" id="file_input" multiple />
+    <button id="submit">提交</button>
+</div>
 </body>
 </html>

@@ -6,6 +6,7 @@ using IW.IDao;
 using IW.Model;
 using System.Configuration;
 using System.IO;
+using System.Web;
 
 namespace IW.Dao
 {
@@ -55,6 +56,30 @@ namespace IW.Dao
             }
 
             return new List<string>();
+        }
+
+        public override int UploadImage(HttpFileCollection files)
+        {
+            var config = ConfigurationManager.AppSettings["xiang"];
+            var fileName = domainPath + config + Guid.NewGuid();
+
+            int number = 0;
+            for (int i = 0; i < files.Count; i++)
+            {
+                fileName = domainPath + config + Guid.NewGuid() + Path.GetExtension(files[i].FileName);
+
+                System.IO.Stream stream = files[i].InputStream;
+                System.Drawing.Image initImage = System.Drawing.Image.FromStream(stream, true);
+                initImage.Save(fileName, System.Drawing.Imaging.ImageFormat.Jpeg);
+               
+                bool ok = System.IO.File.Exists(fileName.ToString());
+                if (ok)
+                {
+                    number++;
+                }
+            }
+
+            return number;
         }
     }
 }

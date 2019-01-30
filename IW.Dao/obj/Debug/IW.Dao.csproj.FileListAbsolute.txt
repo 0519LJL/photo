@@ -1,14 +1,14 @@
-D:\MyProject\photo\IW.Dao\obj\Debug\IW.Dao.csprojResolveAssemblyReference.cache
 D:\MyProject\photo\IW.Dao\bin\Debug\IW.Dao.dll
 D:\MyProject\photo\IW.Dao\bin\Debug\IW.Dao.pdb
 D:\MyProject\photo\IW.Dao\bin\Debug\IW.CommonUtil.dll
+D:\MyProject\photo\IW.Dao\bin\Debug\IW.IDao.dll
 D:\MyProject\photo\IW.Dao\bin\Debug\IW.Model.dll
 D:\MyProject\photo\IW.Dao\bin\Debug\PetaPoco.dll
 D:\MyProject\photo\IW.Dao\bin\Debug\Newtonsoft.Json.dll
 D:\MyProject\photo\IW.Dao\bin\Debug\AutoMapper.dll
 D:\MyProject\photo\IW.Dao\bin\Debug\IW.CommonUtil.pdb
+D:\MyProject\photo\IW.Dao\bin\Debug\IW.IDao.pdb
 D:\MyProject\photo\IW.Dao\bin\Debug\IW.Model.pdb
+D:\MyProject\photo\IW.Dao\obj\Debug\IW.Dao.csprojResolveAssemblyReference.cache
 D:\MyProject\photo\IW.Dao\obj\Debug\IW.Dao.dll
 D:\MyProject\photo\IW.Dao\obj\Debug\IW.Dao.pdb
-D:\MyProject\photo\IW.Dao\bin\Debug\IW.IDao.dll
-D:\MyProject\photo\IW.Dao\bin\Debug\IW.IDao.pdb

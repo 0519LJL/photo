@@ -1,7 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
+using System.Web;
 
 namespace IW.IDao
 {
@@ -10,5 +11,7 @@ namespace IW.IDao
         public abstract void addViewNum();
 
         public abstract List<string> getPhotoList();
+
+        public abstract int UploadImage(HttpFileCollection files);
     }
 }

@@ -26,10 +26,13 @@ namespace MyPhotoManagement.Controllers
             try
             {
                 HttpFileCollection files = System.Web.HttpContext.Current.Request.Files;
-
                 IImageService imageService = new ImageService();
-
                 int number = imageService.UploadImage(files);
+
+                if (number == files.Count)
+                {
+                    return new JsonResult() { Data = "上传成功" };
+                }
 
             }
             catch (Exception e)
@@ -39,7 +42,7 @@ namespace MyPhotoManagement.Controllers
             }
             
             
-            return new JsonResult() { Data = "上传成功" };
+            return new JsonResult() { Data = "上传失败" };
         }
 
         /// <summary>

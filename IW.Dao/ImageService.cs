@@ -7,6 +7,8 @@ using IW.Model;
 using System.Configuration;
 using System.IO;
 using System.Web;
+using System.Drawing;
+using System.Drawing.Imaging;
 
 namespace IW.Dao
 {
@@ -69,9 +71,23 @@ namespace IW.Dao
                 fileName = domainPath + config + Guid.NewGuid() + Path.GetExtension(files[i].FileName);
 
                 System.IO.Stream stream = files[i].InputStream;
-                System.Drawing.Image initImage = System.Drawing.Image.FromStream(stream, true);
-                initImage.Save(fileName, System.Drawing.Imaging.ImageFormat.Jpeg);
-               
+                Image initImage = System.Drawing.Image.FromStream(stream, true);
+                foreach (var p in initImage.PropertyItems)
+                {
+                    if (p.Id == 0x112)
+                    {
+                        var rft = p.Value[0] == 6 ? RotateFlipType.Rotate90FlipNone
+                                : p.Value[0] == 3 ? RotateFlipType.Rotate180FlipNone
+                                : p.Value[0] == 8 ? RotateFlipType.Rotate270FlipNone
+                                : p.Value[0] == 1 ? RotateFlipType.RotateNoneFlipNone
+                                : RotateFlipType.RotateNoneFlipNone;
+                        p.Value[0] = 0;  //旋转属性值设置为不旋转
+                        initImage.SetPropertyItem(p); //回拷进图片流
+                        initImage.RotateFlip(rft);
+                    }
+                }
+                initImage.Save(fileName, ImageFormat.Jpeg);
+                
                 bool ok = System.IO.File.Exists(fileName.ToString());
                 if (ok)
                 {

@@ -5,3 +5,10 @@ D:\MyProject\photo\IW.IDao\bin\Debug\IW.Model.pdb
 D:\MyProject\photo\IW.IDao\obj\Debug\IW.IDao.csprojResolveAssemblyReference.cache
 D:\MyProject\photo\IW.IDao\obj\Debug\IW.IDao.dll
 D:\MyProject\photo\IW.IDao\obj\Debug\IW.IDao.pdb
+F:\HoldProject\GitProject\photo\IW.IDao\bin\Debug\IW.IDao.dll
+F:\HoldProject\GitProject\photo\IW.IDao\bin\Debug\IW.IDao.pdb
+F:\HoldProject\GitProject\photo\IW.IDao\bin\Debug\IW.Model.dll
+F:\HoldProject\GitProject\photo\IW.IDao\bin\Debug\IW.Model.pdb
+F:\HoldProject\GitProject\photo\IW.IDao\obj\Debug\IW.IDao.csprojResolveAssemblyReference.cache
+F:\HoldProject\GitProject\photo\IW.IDao\obj\Debug\IW.IDao.dll
+F:\HoldProject\GitProject\photo\IW.IDao\obj\Debug\IW.IDao.pdb

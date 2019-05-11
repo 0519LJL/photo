@@ -40,7 +40,7 @@ namespace IW.Dao
         public override int addPageInfos(ViewPageInfo viewPage)
         {
             var db = new PetaPoco.Database("connection");
-            var result = db.Execute("INSERT  INTO dbo.viewPageInfo ( pageId, pageName, viewNum ) VALUES  ( @pageId, @pageName, @viewNum )", viewPage);
+            var result = db.Execute("INSERT  INTO dbo.viewPageInfo ( pageId, pageName, viewNum, isEnable, createTime, lastUpdateDate ) VALUES  ( @pageId, @pageName, @viewNum, 1, GETDATE(), GETDATE() )", viewPage);
             return result;
         }
 

@@ -169,31 +169,30 @@
             height: 30px;
             width: 30px;
         }
-
     </style>
 </head>
 <body>
     <div class="header">
         <img id="imgMuc" class="div_music" src="~/images/music1.png" onclick="playOrPause()" />
         <div class="title">
-            <label style="position: absolute; bottom: 5px; left: 10px; font-family: YouYuan; font-size: 30px; font-weight: bold"><img class="title_le_img" src="~/photo/title.png" />哈哈哈<img class="title_ri_img" src="~/photo/title.png" /></label>
+            <label style="position: absolute; bottom: 5px; left: 10px; font-family: YouYuan; font-size: 30px; font-weight: bold"><img class="title_le_img" src="/photo/title.png" />哈哈哈<img class="title_ri_img" src="~/photo/title.png" /></label>
         </div>
     </div>
     <div class="center">
         <div id="div_photo" class="div_photo_h">
-            <img id="xiang" class="xiang_h" src="photo/xiang_h1.png" />
+            <img id="xiang" class="xiang_h" src="/photo/xiang_h1.png" />
             <img id="photo" class="photo_h" />
         </div>
     </div>
     <div class="bottom">
         <div class="div_bot_font">
-            <marquee direction=up behavior=scroll scrollamount=1 scrolldelay=10 align="left" style="position: absolute;top: 15px; left: 15px;height:80%;width:200px;font-size: 15px;font-weight:bold " >
+            <marquee direction=up behavior=scroll scrollamount=1 scrolldelay=10 align="left" style="position: absolute;top: 15px; left: 15px;height:80%;width:200px;font-size: 15px;font-weight:bold ">
                 <p>我试试</p>
                 <p>第一段</p>
                 <p style="text-indent:1em;"> MARQUEE 元素的默认宽度与其父元素的宽度相等。如果 MARQUEE 位于没有指定宽度的 TD 内，你就需要明确设置 MARQUEE 的宽度。如果 MARQUEE 和 TD 的宽度都没有指定，那么滚动字幕就将限定于 1 个像素宽。</p>
                 <p>第三段</p>
                 <p>第四段</p>
-            </marquee>    
+            </marquee>
         </div>
         <div class="div_bot_ph">
             <img id="bot_img" style="height: 100%; width: 100%; position: absolute;" src="~/photo/dong3.gif" />
@@ -205,84 +204,89 @@
             does not support.
         </audio>
     </div>
-<script type="text/javascript">
-    
+    <script type="text/javascript">
 
-    var aud = document.getElementById("auMusic");
 
-    function playOrPause() {
-        if (aud.paused) {
-            aud.play();
-        } else {
-            aud.pause();
-        }
-    }
+        var aud = document.getElementById("auMusic");
 
-    var root = 2;
-    aud.loop = false;
-    aud.addEventListener('ended',
-        function () {
-
-            $("#auMusic").attr("src", "audio/mp3/" + root + ".mp3");
-            root += 1;
-            if (root > 7) {
-                root = 1;
+        function playOrPause() {
+            if (aud.paused) {
+                aud.play();
+            } else {
+                aud.pause();
             }
-        },
-        false);
+        }
+
+        var root = 2;
+        aud.loop = false;
+        aud.addEventListener('ended',
+            function () {
+
+                $("#auMusic").attr("src", "/audio/mp3/" + root + ".mp3");
+                root += 1;
+                if (root > 7) {
+                    root = 1;
+                }
+            },
+            false);
 
 
-</script>
+    </script>
 
     @*定时器*@
-<script type="text/javascript">
+    <script type="text/javascript">
 
 
-    //图片转换
-    var bot_num = 2;
-    setInterval(function () {
-            $("#bot_img").attr("src", "photo/dong" + bot_num + ".gif");
+        //图片转换
+        var bot_num = 2;
+        setInterval(function () {
+            $("#bot_img").fadeOut(500, function () {
+                {
+                    $("#bot_img").attr("src", "/photo/dong" + bot_num + ".gif");
+                }
+            });
+            $("#bot_img").fadeIn(300);
             bot_num++;
             if (bot_num > 3) {
                 bot_num = 1;
             }
         },
-        16000);
+            16000);
 
-    var dataList = [];
-    $(function () {
+        var dataList = [];
+        $(function () {
 
-        $.ajax({
-            url: 'Home/getImageList',
-            type: 'Post',
-            //data: { strbase: '1231' },
-            dataType: 'json',
-            success: function (data) {
-                dataList = data;
-                $("#photo").attr("src", "photo/wo/" + dataList[0]);
-            }
+            $.ajax({
+                url: '/Home/getImageList',
+                type: 'Post',
+                //data: { strbase: '1231' },
+                dataType: 'json',
+                success: function (data) {
+                    dataList = data;
+                    $("#photo").attr("src", "/photo/wo/" + dataList[0]);
+                }
+            })
         })
-    })
 
 
-    //图片转换
-    var num = 1;
-    var num_xiang = 1;
-    var num_xiang_h = 1;
-    var loop_photo = 6;
-    setInterval(function () {
+        //图片转换
+        var num = 1;
+        var num_xiang = 1;
+        var num_xiang_h = 1;
+        var loop_photo = 6;
+        setInterval(function () {
             var image = new Image();
-            image.src = "photo/wo/" + dataList[num];
+            image.src = "/photo/wo/" + dataList[num];
 
             $("#div_photo").fadeOut(800, function () {
-                $("#photo").attr("src", "photo/wo/" + dataList[num]);
+                $("#photo").attr("src", "/photo/wo/" + dataList[num]);
                 num++;
 
                 if (image.width > image.height) {
                     $("#div_photo").attr("class", "div_photo_h");
                     $("#xiang").attr("class", "xiang_h");
                     $("#photo").attr("class", "photo_h");
-                    $("#xiang").attr("src", "photo/xiang_h" + num_xiang_h + ".png");
+                    $("#xiang").attr("src", "/photo/xiang_h" + num_xiang_h + ".png");
                     if (parseInt(num % loop_photo) == 0) {
                         num_xiang_h++;
                     }
@@ -291,13 +295,13 @@
                     $("#div_photo").attr("class", "div_photo");
                     $("#xiang").attr("class", "xiang");
                     $("#photo").attr("class", "photo");
-                    $("#xiang").attr("src", "photo/xiang" + num_xiang + ".png");
+                    $("#xiang").attr("src", "/photo/xiang" + num_xiang + ".png");
                     if (parseInt(num % loop_photo) == 0) {
                         num_xiang++;
                     }
                 }
-               
-                
+
+
                 if (num >= dataList.length) {
                     num = 0;
                 }
@@ -310,11 +314,11 @@
                 $("#div_photo").fadeIn(600);
             })
         },
-        5000);
+            5000);
 
-    //图标旋转
-    var cor = 5;
-    setInterval(function () {
+        //图标旋转
+        var cor = 5;
+        setInterval(function () {
             $("#imgMuc").css("transform", "rotate(" + cor + "deg)");
             $("#imgMuc").css("-ms-transform", "rotate(" + cor + "deg)");
             $("#imgMuc").css("-moz-transform", "rotate(" + cor + "deg)");
@@ -325,8 +329,8 @@
                 cor = 5;
             }
         },
-        80);
-</script>
+            80);
+    </script>
 
     @*全屏*@
     <script type="text/javascript">

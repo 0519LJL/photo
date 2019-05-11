@@ -3,3 +3,7 @@ D:\MyProject\photo\IW.Model\bin\Debug\IW.Model.pdb
 D:\MyProject\photo\IW.Model\obj\Debug\IW.Model.dll
 D:\MyProject\photo\IW.Model\obj\Debug\IW.Model.pdb
 D:\MyProject\photo\IW.Model\obj\Debug\IW.Model.csprojResolveAssemblyReference.cache
+F:\HoldProject\GitProject\photo\IW.Model\bin\Debug\IW.Model.dll
+F:\HoldProject\GitProject\photo\IW.Model\bin\Debug\IW.Model.pdb
+F:\HoldProject\GitProject\photo\IW.Model\obj\Debug\IW.Model.dll
+F:\HoldProject\GitProject\photo\IW.Model\obj\Debug\IW.Model.pdb

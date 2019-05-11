@@ -12,3 +12,17 @@ D:\MyProject\photo\IW.Dao\bin\Debug\IW.Model.pdb
 D:\MyProject\photo\IW.Dao\obj\Debug\IW.Dao.csprojResolveAssemblyReference.cache
 D:\MyProject\photo\IW.Dao\obj\Debug\IW.Dao.dll
 D:\MyProject\photo\IW.Dao\obj\Debug\IW.Dao.pdb
+F:\HoldProject\GitProject\photo\IW.Dao\bin\Debug\IW.Dao.dll
+F:\HoldProject\GitProject\photo\IW.Dao\bin\Debug\IW.Dao.pdb
+F:\HoldProject\GitProject\photo\IW.Dao\bin\Debug\IW.CommonUtil.dll
+F:\HoldProject\GitProject\photo\IW.Dao\bin\Debug\IW.IDao.dll
+F:\HoldProject\GitProject\photo\IW.Dao\bin\Debug\IW.Model.dll
+F:\HoldProject\GitProject\photo\IW.Dao\bin\Debug\PetaPoco.dll
+F:\HoldProject\GitProject\photo\IW.Dao\bin\Debug\Newtonsoft.Json.dll
+F:\HoldProject\GitProject\photo\IW.Dao\bin\Debug\AutoMapper.dll
+F:\HoldProject\GitProject\photo\IW.Dao\bin\Debug\IW.CommonUtil.pdb
+F:\HoldProject\GitProject\photo\IW.Dao\bin\Debug\IW.IDao.pdb
+F:\HoldProject\GitProject\photo\IW.Dao\bin\Debug\IW.Model.pdb
+F:\HoldProject\GitProject\photo\IW.Dao\obj\Debug\IW.Dao.csprojResolveAssemblyReference.cache
+F:\HoldProject\GitProject\photo\IW.Dao\obj\Debug\IW.Dao.dll
+F:\HoldProject\GitProject\photo\IW.Dao\obj\Debug\IW.Dao.pdb

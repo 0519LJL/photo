@@ -11,3 +11,16 @@ D:\MyProject\photo\UnitTestProject1\bin\Debug\IW.Model.pdb
 D:\MyProject\photo\UnitTestProject1\obj\Debug\UnitTestProject1.csprojResolveAssemblyReference.cache
 D:\MyProject\photo\UnitTestProject1\obj\Debug\UnitTestProject1.dll
 D:\MyProject\photo\UnitTestProject1\obj\Debug\UnitTestProject1.pdb
+F:\HoldProject\GitProject\photo\UnitTestProject1\bin\Debug\UnitTestProject1.dll.config
+F:\HoldProject\GitProject\photo\UnitTestProject1\bin\Debug\UnitTestProject1.dll
+F:\HoldProject\GitProject\photo\UnitTestProject1\bin\Debug\UnitTestProject1.pdb
+F:\HoldProject\GitProject\photo\UnitTestProject1\bin\Debug\IW.Dao.dll
+F:\HoldProject\GitProject\photo\UnitTestProject1\bin\Debug\IW.IDao.dll
+F:\HoldProject\GitProject\photo\UnitTestProject1\bin\Debug\IW.Model.dll
+F:\HoldProject\GitProject\photo\UnitTestProject1\bin\Debug\PetaPoco.dll
+F:\HoldProject\GitProject\photo\UnitTestProject1\bin\Debug\IW.Dao.pdb
+F:\HoldProject\GitProject\photo\UnitTestProject1\bin\Debug\IW.IDao.pdb
+F:\HoldProject\GitProject\photo\UnitTestProject1\bin\Debug\IW.Model.pdb
+F:\HoldProject\GitProject\photo\UnitTestProject1\obj\Debug\UnitTestProject1.csprojResolveAssemblyReference.cache
+F:\HoldProject\GitProject\photo\UnitTestProject1\obj\Debug\UnitTestProject1.dll
+F:\HoldProject\GitProject\photo\UnitTestProject1\obj\Debug\UnitTestProject1.pdb
